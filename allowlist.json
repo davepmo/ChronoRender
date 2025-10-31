@@ -3,273 +3,43 @@
     "ChAxis"
   ],
   "modules": {
-    "pychrono": [
-      "ACCELERATION",
-      "AddBiSphereGeometry",
-      "AddBoxContainer",
-      "AddBoxGeometry",
-      "AddCapsuleGeometry",
-      "AddConeGeometry",
+    "pychrono.core": [
       "AddContactCallback",
-      "AddConvexCollisionModel",
-      "AddCylinderGeometry",
-      "AddEllipsoidGeometry",
       "AddProximityCallback",
-      "AddRoundedBoxGeometry",
-      "AddRoundedCylinderGeometry",
-      "AddSphereGeometry",
-      "AddTorusGeometry",
-      "AddTriangleGeometry",
-      "AddTriangleMeshConvexDecomposition",
-      "AddTriangleMeshConvexDecompositionSplit",
-      "AddTriangleMeshConvexDecompositionV2",
-      "AddTriangleMeshGeometry",
       "AngleAxis",
-      "AngleAxisFromQuat",
       "AngleSet",
-      "AngleSetFromAngleSet",
-      "AngleSetFromQuat",
-      "AngleSetFromRodrigues",
-      "BODY_DOF",
-      "BODY_QDOF",
-      "BODY_ROT",
       "BoxShape",
       "BroadphaseCallback",
       "BushingData",
-      "CH_1_3",
-      "CH_1_6",
-      "CH_2PI",
-      "CH_2_3",
-      "CH_4_3",
-      "CH_DEG_TO_RAD",
-      "CH_PI",
-      "CH_PI_2",
-      "CH_PI_3",
-      "CH_PI_4",
-      "CH_RAD_S_TO_RPM",
-      "CH_RAD_TO_DEG",
-      "CH_RPM_TO_RAD_S",
-      "CH_SQRT_2",
-      "CSYSNORM",
-      "CSYSNULL",
-      "CameraVerticalDir_Y",
-      "CameraVerticalDir_Z",
-      "CastContactableToChBody",
-      "CastToChBody",
-      "CastToChBodyAuxRef",
-      "CastToChBodyFrame",
-      "CastToChCollisionShapeArc2D",
-      "CastToChCollisionShapeBarrel",
-      "CastToChCollisionShapeBox",
-      "CastToChCollisionShapeCapsule",
-      "CastToChCollisionShapeCone",
-      "CastToChCollisionShapeConvexHull",
-      "CastToChCollisionShapeCylinder",
-      "CastToChCollisionShapeCylindricalShell",
-      "CastToChCollisionShapeEllipsoid",
-      "CastToChCollisionShapePath2D",
-      "CastToChCollisionShapePoint",
-      "CastToChCollisionShapeRoundedBox",
-      "CastToChCollisionShapeRoundedCylinder",
-      "CastToChCollisionShapeSegment2D",
-      "CastToChCollisionShapeSphere",
-      "CastToChCollisionShapeTriangle",
-      "CastToChCollisionShapeTriangleMesh",
-      "CastToChCollisionSystemBullet",
-      "CastToChContactMaterialCompositeNSC",
-      "CastToChContactMaterialCompositeSMC",
-      "CastToChContactMaterialNSC",
-      "CastToChContactMaterialSMC",
-      "CastToChConveyor",
-      "CastToChDirectSolverLS",
-      "CastToChFunctionBSpline",
-      "CastToChFunctionConst",
-      "CastToChFunctionConstAcc",
-      "CastToChFunctionConstJerk",
-      "CastToChFunctionCycloidal",
-      "CastToChFunctionDerivative",
-      "CastToChFunctionFillet3",
-      "CastToChFunctionIntegral",
-      "CastToChFunctionInterp",
-      "CastToChFunctionMirror",
-      "CastToChFunctionOperator",
-      "CastToChFunctionPoly",
-      "CastToChFunctionPoly23",
-      "CastToChFunctionPoly345",
-      "CastToChFunctionRamp",
-      "CastToChFunctionRepeat",
-      "CastToChFunctionSequence",
-      "CastToChFunctionSetpoint",
-      "CastToChFunctionSine",
-      "CastToChFunctionSineStep",
-      "CastToChIndexedParticles",
-      "CastToChIterativeSolverLS",
-      "CastToChIterativeSolverVI",
-      "CastToChLink",
-      "CastToChLinkBushing",
-      "CastToChLinkDistance",
-      "CastToChLinkLock",
-      "CastToChLinkLockAlign",
-      "CastToChLinkLockCylindrical",
-      "CastToChLinkLockFree",
-      "CastToChLinkLockGear",
-      "CastToChLinkLockLinActuator",
-      "CastToChLinkLockLock",
-      "CastToChLinkLockOldham",
-      "CastToChLinkLockParallel",
-      "CastToChLinkLockPerpend",
-      "CastToChLinkLockPointLine",
-      "CastToChLinkLockPointPlane",
-      "CastToChLinkLockPointSpline",
-      "CastToChLinkLockPrismatic",
-      "CastToChLinkLockPulley",
-      "CastToChLinkLockRevolute",
-      "CastToChLinkLockScrew",
-      "CastToChLinkLockSpherical",
-      "CastToChLinkLockTrajectory",
-      "CastToChLinkMarkers",
-      "CastToChLinkMate",
-      "CastToChLinkMateCylindrical",
-      "CastToChLinkMateDistanceZ",
-      "CastToChLinkMateFix",
-      "CastToChLinkMateGeneric",
-      "CastToChLinkMateOrthogonal",
-      "CastToChLinkMateParallel",
-      "CastToChLinkMatePlanar",
-      "CastToChLinkMatePrismatic",
-      "CastToChLinkMateRevolute",
-      "CastToChLinkMateSpherical",
-      "CastToChLinkMotor",
-      "CastToChLinkMotorLinear",
-      "CastToChLinkMotorLinearDriveline",
-      "CastToChLinkMotorLinearForce",
-      "CastToChLinkMotorLinearPosition",
-      "CastToChLinkMotorLinearSpeed",
-      "CastToChLinkMotorRotation",
-      "CastToChLinkMotorRotationAngle",
-      "CastToChLinkMotorRotationDriveline",
-      "CastToChLinkMotorRotationSpeed",
-      "CastToChLinkMotorRotationTorque",
-      "CastToChLinkRSDA",
-      "CastToChLinkTSDA",
-      "CastToChLoadBodyBody",
-      "CastToChLoadBodyBodyBushingGeneric",
-      "CastToChLoadBodyBodyBushingMate",
-      "CastToChLoadBodyBodyBushingPlastic",
-      "CastToChLoadBodyBodyBushingSpherical",
-      "CastToChLoadBodyBodyTorque",
-      "CastToChLoadBodyForce",
-      "CastToChLoadBodyInertia",
-      "CastToChLoadBodyTorque",
-      "CastToChLoadContainer",
-      "CastToChLoadCustom",
-      "CastToChLoadCustomMultiple",
-      "CastToChNodeBase",
-      "CastToChNodeXYZ",
-      "CastToChParticleCloud",
-      "CastToChShaft",
-      "CastToChShaftBodyRotation",
-      "CastToChShaftBodyTranslation",
-      "CastToChShaftsAppliedTorque",
-      "CastToChShaftsClutch",
-      "CastToChShaftsCouple",
-      "CastToChShaftsMotor",
-      "CastToChShaftsPlanetary",
-      "CastToChShaftsThermalEngine",
-      "CastToChShaftsTorque",
-      "CastToChShaftsTorsionSpring",
-      "CastToChSolverADMM",
-      "CastToChSolverAPGD",
-      "CastToChSolverBB",
-      "CastToChSolverBiCGSTAB",
-      "CastToChSolverGMRES",
-      "CastToChSolverMINRES",
-      "CastToChSolverPSOR",
-      "CastToChSolverSparseLU",
-      "CastToChSolverSparseQR",
-      "CastToChTriangleMeshConnected",
-      "CastToChTriangleMeshSoup",
-      "CastToChVisualShapeBarrel",
-      "CastToChVisualShapeBox",
-      "CastToChVisualShapeCapsule",
-      "CastToChVisualShapeCone",
-      "CastToChVisualShapeCylinder",
-      "CastToChVisualShapeEllipsoid",
-      "CastToChVisualShapeFEA",
-      "CastToChVisualShapeLine",
-      "CastToChVisualShapeModelFile",
-      "CastToChVisualShapePath",
-      "CastToChVisualShapePointPoint",
-      "CastToChVisualShapeRotSpring",
-      "CastToChVisualShapeRoundedBox",
-      "CastToChVisualShapeRoundedCylinder",
-      "CastToChVisualShapeSegment",
-      "CastToChVisualShapeSphere",
-      "CastToChVisualShapeSpring",
-      "CastToChVisualShapeSurface",
-      "CastToChVisualShapeTriangleMesh",
       "ChAABB",
       "ChAbsorbedPowerVertical",
       "ChAddProximityCallbackP",
       "ChAnalogueFilter",
       "ChAssembly",
       "ChAssemblyAnalysis",
-      "ChAxis_X",
-      "ChAxis_Y",
-      "ChAxis_Z",
       "ChBezierCurve",
       "ChBezierCurveTracker",
-      "ChBezierCurve_Read",
       "ChBody",
       "ChBodyAuxRef",
       "ChBodyEasyBox",
-      "ChBodyEasyBox_ArchiveInConstructor",
       "ChBodyEasyClusterOfSpheres",
-      "ChBodyEasyClusterOfSpheres_ArchiveInConstructor",
       "ChBodyEasyConvexHull",
       "ChBodyEasyConvexHullAuxRef",
-      "ChBodyEasyConvexHullAuxRef_ArchiveInConstructor",
-      "ChBodyEasyConvexHull_ArchiveInConstructor",
       "ChBodyEasyCylinder",
-      "ChBodyEasyCylinder_ArchiveInConstructor",
       "ChBodyEasyEllipsoid",
-      "ChBodyEasyEllipsoid_ArchiveInConstructor",
       "ChBodyEasyMesh",
-      "ChBodyEasyMesh_ArchiveInConstructor",
       "ChBodyEasySphere",
-      "ChBodyEasySphere_ArchiveInConstructor",
       "ChBodyFrame",
       "ChBodyGeometry",
-      "ChBodyGeometry_AddVisualizationCylinder",
-      "ChBodyGeometry_GetVisualizationTypeAsString",
       "ChBox",
-      "ChBox_GetBoundingBox",
-      "ChBox_GetBoundingSphereRadius",
-      "ChBox_GetGyration",
-      "ChBox_GetVolume",
       "ChButterworthHighpass",
       "ChButterworthLowpass",
       "ChCamera",
       "ChCapsule",
-      "ChCapsule_GetBoundingBox",
-      "ChCapsule_GetBoundingSphereRadius",
-      "ChCapsule_GetGyration",
-      "ChCapsule_GetVolume",
       "ChClassFactory",
-      "ChClassFactory_ClassRegister",
-      "ChClassFactory_ClassUnregister",
-      "ChClassFactory_GetClass",
-      "ChClassFactory_GetClassTagName",
-      "ChClassFactory_IsClassRegistered",
       "ChCollisionInfo",
-      "ChCollisionInfo_GetDefaultEffectiveCurvatureRadius",
-      "ChCollisionInfo_SetDefaultEffectiveCurvatureRadius",
       "ChCollisionModel",
       "ChCollisionModelImpl",
-      "ChCollisionModel_GetDefaultSuggestedEnvelope",
-      "ChCollisionModel_GetDefaultSuggestedMargin",
-      "ChCollisionModel_SetDefaultSuggestedEnvelope",
-      "ChCollisionModel_SetDefaultSuggestedMargin",
       "ChCollisionShape",
       "ChCollisionShapeArc2D",
       "ChCollisionShapeBarrel",
@@ -277,7 +47,6 @@
       "ChCollisionShapeCapsule",
       "ChCollisionShapeCone",
       "ChCollisionShapeConvexHull",
-      "ChCollisionShapeConvexHull_Read",
       "ChCollisionShapeCylinder",
       "ChCollisionShapeCylindricalShell",
       "ChCollisionShapeEllipsoid",
@@ -292,19 +61,9 @@
       "ChCollisionShapeTriangleMesh",
       "ChCollisionSystem",
       "ChCollisionSystemBullet",
-      "ChCollisionSystemBullet_SetContactBreakingThreshold",
       "ChColor",
-      "ChColor_HSV2RGB",
-      "ChColor_RGB2HSV",
       "ChColormap",
-      "ChColormap_GetDataFilename",
-      "ChColormap_GetFilenames",
-      "ChColormap_GetImageFilename",
       "ChCone",
-      "ChCone_GetBoundingBox",
-      "ChCone_GetBoundingSphereRadius",
-      "ChCone_GetGyration",
-      "ChCone_GetVolume",
       "ChConstantDistribution",
       "ChContactContainer",
       "ChContactForceTorqueSMC",
@@ -316,9 +75,6 @@
       "ChContactMaterialData",
       "ChContactMaterialNSC",
       "ChContactMaterialSMC",
-      "ChContactMaterial_DefaultMaterial",
-      "ChContactMethod_NSC",
-      "ChContactMethod_SMC",
       "ChContactable",
       "ChContinuumDistribution",
       "ChControllerPID",
@@ -328,18 +84,10 @@
       "ChConveyor",
       "ChCoordsysd",
       "ChCylinder",
-      "ChCylinder_GetBoundingBox",
-      "ChCylinder_GetBoundingSphereRadius",
-      "ChCylinder_GetGyration",
-      "ChCylinder_GetVolume",
       "ChDirectSolverLS",
       "ChDiscreteDistribution",
       "ChDistribution",
       "ChEllipsoid",
-      "ChEllipsoid_GetBoundingBox",
-      "ChEllipsoid_GetBoundingSphereRadius",
-      "ChEllipsoid_GetGyration",
-      "ChEllipsoid_GetVolume",
       "ChExplicitTimestepper",
       "ChFeeder",
       "ChFilterD",
@@ -384,7 +132,6 @@
       "ChFunctionSetpointCallback",
       "ChFunctionSine",
       "ChFunctionSineStep",
-      "ChFunctionSineStep_Eval",
       "ChGeometry",
       "ChGlyphs",
       "ChISO2631_1_AVTransition",
@@ -407,8 +154,6 @@
       "ChIterativeSolverLS",
       "ChIterativeSolverVI",
       "ChJoint",
-      "ChJoint_GetTypeString",
-      "ChJoint_Remove",
       "ChLine",
       "ChLineArc",
       "ChLineBSpline",
@@ -465,13 +210,11 @@
       "ChLinkMotorLinearForce",
       "ChLinkMotorLinearPosition",
       "ChLinkMotorLinearSpeed",
-      "ChLinkMotorLinear_GetGuideTypeString",
       "ChLinkMotorRotation",
       "ChLinkMotorRotationAngle",
       "ChLinkMotorRotationDriveline",
       "ChLinkMotorRotationSpeed",
       "ChLinkMotorRotationTorque",
-      "ChLinkMotorRotation_GetSpindleTypeString",
       "ChLinkRSDA",
       "ChLinkRevolute",
       "ChLinkRevoluteSpherical",
@@ -536,8 +279,6 @@
       "ChNormalDistribution",
       "ChObj",
       "ChOutput",
-      "ChOutput_GetOutputModeAsString",
-      "ChOutput_GetOutputTypeAsString",
       "ChParticleBase",
       "ChParticleCloud",
       "ChParticleEmitter",
@@ -574,22 +315,12 @@
       "ChRandomShapeCreatorShavings",
       "ChRandomShapeCreatorSpheres",
       "ChRandomShapeCreator_AddBodyCallback",
-      "ChRandom_Get",
-      "ChRandom_SetSeed",
       "ChRayhitResult",
       "ChRealtimeStepTimer",
       "ChRefineEdgeCriterion",
       "ChReportProximityCallbackP",
       "ChRoundedBox",
-      "ChRoundedBox_GetBoundingBox",
-      "ChRoundedBox_GetBoundingSphereRadius",
-      "ChRoundedBox_GetGyration",
-      "ChRoundedBox_GetVolume",
       "ChRoundedCylinder",
-      "ChRoundedCylinder_GetBoundingBox",
-      "ChRoundedCylinder_GetBoundingSphereRadius",
-      "ChRoundedCylinder_GetGyration",
-      "ChRoundedCylinder_GetVolume",
       "ChRunningAverage",
       "ChShaft",
       "ChShaftBodyRotation",
@@ -623,12 +354,7 @@
       "ChSolverSparseLU",
       "ChSolverSparseQR",
       "ChSolverVI",
-      "ChSolver_GetTypeAsString",
       "ChSphere",
-      "ChSphere_GetBoundingBox",
-      "ChSphere_GetBoundingSphereRadius",
-      "ChSphere_GetGyration",
-      "ChSphere_GetVolume",
       "ChState",
       "ChStateDelta",
       "ChStaticAnalysis",
@@ -643,7 +369,6 @@
       "ChSystem",
       "ChSystemNSC",
       "ChSystemSMC",
-      "ChSystem_Create",
       "ChTSDAGeometry",
       "ChTexture",
       "ChTimer",
@@ -664,20 +389,11 @@
       "ChTimestepperTrapezoidal",
       "ChTimestepperTrapezoidalLinearized",
       "ChTimestepperTrapezoidalLinearized2",
-      "ChTimestepper_GetTypeAsString",
       "ChTriangle",
       "ChTriangleMesh",
       "ChTriangleMeshConnected",
-      "ChTriangleMeshConnected_CreateFromSTLFile",
-      "ChTriangleMeshConnected_CreateFromWavefrontFile",
-      "ChTriangleMeshConnected_GetBoundingBox",
-      "ChTriangleMeshConnected_Merge",
-      "ChTriangleMeshConnected_WriteWavefront",
       "ChTriangleMeshConnected_list",
       "ChTriangleMeshSoup",
-      "ChTriangleMeshSoup_CreateFromWavefrontFile",
-      "ChTriangle_CalcNormal",
-      "ChTriangle_GetBoundingBox",
       "ChUniformDistribution",
       "ChVector2d",
       "ChVector2f",
@@ -688,7 +404,6 @@
       "ChVectorDynamicI",
       "ChVectorDynamicd",
       "ChVisualMaterial",
-      "ChVisualMaterial_Default",
       "ChVisualModel",
       "ChVisualModelInstance",
       "ChVisualShape",
@@ -724,163 +439,32 @@
       "ColorCallback",
       "ConeShape",
       "ConvexHullsShape",
-      "CreateBoxContainer",
-      "CreateCylindricalContainerFromBoxes",
       "CustomCollisionCallback",
       "CylinderShape",
-      "DegenerateTriangle",
-      "EIGEN_MATRIXBASE_PLUGIN",
-      "EIGEN_SPARSEMATRIX_PLUGIN",
-      "ExitFlag_ABSTOL_RESIDUAL",
-      "ExitFlag_ABSTOL_UPDATE",
-      "ExitFlag_NOT_CONVERGED",
-      "ExitFlag_RELTOL_UPDATE",
-      "ExitFlag_SUCCESS",
-      "FULL",
       "Files",
       "ForceFunctor",
-      "GetChronoDataFile",
-      "GetChronoDataPath",
-      "GetChronoOutputPath",
-      "GetMatr",
-      "GetVect",
-      "ImportSolidWorksSystem",
       "IterationCallback",
-      "LineLineIntersect",
       "LineShape",
-      "LoadConvexHulls",
-      "LoadConvexMesh",
       "LoadIncrementCallback",
       "NarrowphaseCallback",
       "ODE",
-      "POSITION",
-      "PasteMatrix",
-      "PointLineDistance",
-      "PointTriangleDistance",
-      "QNULL",
-      "QUNIT",
-      "Q_FLIP_AROUND_X",
-      "Q_FLIP_AROUND_Y",
-      "Q_FLIP_AROUND_Z",
-      "Q_ROTATE_X_TO_Y",
-      "Q_ROTATE_X_TO_Z",
-      "Q_ROTATE_Y_TO_X",
-      "Q_ROTATE_Y_TO_Z",
-      "Q_ROTATE_Z_TO_X",
-      "Q_ROTATE_Z_TO_Y",
-      "Qadd",
-      "Qconjugate",
-      "Qcross",
-      "Qequal",
-      "Qlength",
-      "Qnorm",
-      "Qnotnull",
-      "Qscale",
-      "Qsub",
-      "QuatDt2FromAngAccAbs",
-      "QuatDt2FromAngAccRel",
-      "QuatDt2FromAngleAxis",
-      "QuatDt2FromAngleSet",
-      "QuatDt2FromImaginary",
-      "QuatDt2FromRodrigues",
-      "QuatDtFromAngVelAbs",
-      "QuatDtFromAngVelRel",
-      "QuatDtFromAngleAxis",
-      "QuatDtFromAngleSet",
-      "QuatDtFromImaginary",
-      "QuatDtFromRodrigues",
-      "QuatFromAngleAxis",
-      "QuatFromAngleSet",
-      "QuatFromAngleX",
-      "QuatFromAngleY",
-      "QuatFromAngleZ",
-      "QuatFromImaginary",
-      "QuatFromRodrigues",
-      "QuatFromRotVec",
-      "QuatFromVec2Vec",
-      "ReadCheckpoint",
       "ReportContactCallback",
       "ReportProximityCallback",
-      "RodriguesFromAngleSet",
-      "RodriguesFromQuat",
-      "RotRepresentation_ANGLE_AXIS",
-      "RotRepresentation_CARDAN_ANGLES_XYZ",
-      "RotRepresentation_CARDAN_ANGLES_ZXY",
-      "RotRepresentation_CARDAN_ANGLES_ZYX",
-      "RotRepresentation_EULER_ANGLES_ZXZ",
-      "RotRepresentation_RODRIGUES",
-      "RotRepresentation_ROTATION_VECTOR",
-      "RotVecFromQuat",
-      "SHARED_PTR_DISOWN",
-      "SOURCE_PATH_SIZE",
       "SegmentShape",
-      "SetChronoDataPath",
-      "SetChronoOutputPath",
-      "SetMatr",
       "SphereShape",
       "SpringShape",
-      "StreamOut",
       "SwigPyIterator",
       "TorqueFunctor",
       "TrimeshShape",
-      "VECT_X",
-      "VECT_Y",
-      "VECT_Z",
-      "VELOCITY",
-      "VNULL",
-      "VaxisXfromQuat",
-      "Vcross",
-      "Vdot",
       "VisibilityCallback",
       "VisualizationCallback",
-      "VisualizationType_COLLISION",
-      "VisualizationType_MESH",
-      "VisualizationType_NONE",
-      "VisualizationType_PRIMITIVES",
-      "WriteBodies",
-      "WriteCamera",
-      "WriteCheckpoint",
-      "WriteCurvePovray",
-      "WriteMeshPovray",
-      "WriteVisualizationAssets",
-      "__builtins__",
-      "__cached__",
-      "__doc__",
-      "__file__",
-      "__loader__",
-      "__name__",
-      "__package__",
-      "__path__",
-      "__spec__",
-      "_cascade",
-      "_core",
-      "_fea",
-      "_irrlicht",
-      "_postprocess",
-      "_robot",
-      "_vehicle",
-      "cascade",
-      "core",
-      "cvar",
-      "ddir",
+      "_SwigNonDynamicMeta",
       "double_ptr",
-      "double_ptr_frompointer",
       "eigen_assert_exception",
       "eigen_static_assert_exception",
-      "fea",
       "float_ptr",
-      "float_ptr_frompointer",
-      "idir",
       "int_ptr",
-      "int_ptr_frompointer",
-      "irrlicht",
       "material_list",
-      "os",
-      "pathlib",
-      "postprocess",
-      "reshape",
-      "robot",
-      "should_raise_an_assert",
       "vector_ChBody",
       "vector_ChCoordsysd",
       "vector_ChLink",
@@ -898,61 +482,10 @@
       "vector_ChVector3i",
       "vector_CollisionShapeInstance",
       "vector_vector_ChVector2d",
-      "vector_vector_ChVector3d",
-      "vehicle",
-      "weakref"
+      "vector_vector_ChVector3d"
     ],
     "pychrono.fea": [
       "BroadphaseCallback",
-      "CastContactableToChContactNodeXYZ",
-      "CastContactableToChContactNodeXYZRot",
-      "CastContactableToChContactTriangleXYZ",
-      "CastContactableToChContactTriangleXYZRot",
-      "CastToChContactNodeXYZ",
-      "CastToChContactNodeXYZRot",
-      "CastToChContactTriangleXYZ",
-      "CastToChContactTriangleXYZRot",
-      "CastToChDampingCosseratLinear",
-      "CastToChDampingCosseratRayleigh",
-      "CastToChElasticityCosseratAdvanced",
-      "CastToChElasticityCosseratGeneric",
-      "CastToChElasticityCosseratMesh",
-      "CastToChElasticityCosseratSimple",
-      "CastToChElasticityKirchhoffGeneric",
-      "CastToChElasticityKirchhoffIsothropic",
-      "CastToChElasticityKirchhoffOrthotropic",
-      "CastToChElasticityReissnerGeneric",
-      "CastToChElasticityReissnerIsothropic",
-      "CastToChElasticityReissnerOrthotropic",
-      "CastToChElementBar",
-      "CastToChElementBeamANCF_3243",
-      "CastToChElementBeamANCF_3333",
-      "CastToChElementBeamEuler",
-      "CastToChElementBeamIGA",
-      "CastToChElementCableANCF",
-      "CastToChElementHexaANCF_3813",
-      "CastToChElementHexaANCF_3813_9",
-      "CastToChElementHexaCorot_20",
-      "CastToChElementHexaCorot_8",
-      "CastToChElementShellANCF_3423",
-      "CastToChElementShellANCF_3833",
-      "CastToChElementShellReissner4",
-      "CastToChElementSpring",
-      "CastToChElementTetraCorot_10",
-      "CastToChElementTetraCorot_4",
-      "CastToChElementTetraCorot_4_P",
-      "CastToChInertiaCosseratAdvanced",
-      "CastToChInertiaCosseratMassref",
-      "CastToChInertiaCosseratSimple",
-      "CastToChMesh",
-      "CastToChNodeFEAbase",
-      "CastToChNodeFEAxyz",
-      "CastToChNodeFEAxyzD",
-      "CastToChNodeFEAxyzDD",
-      "CastToChNodeFEAxyzDDD",
-      "CastToChNodeFEAxyzP",
-      "CastToChNodeFEAxyzrot",
-      "CastToChPlasticityCosseratLumped",
       "ChBeamMaterialInternalData",
       "ChBeamSection",
       "ChBeamSectionCable",
@@ -1078,10 +611,6 @@
       "ChMaterialShellReissnerOrthotropic",
       "ChMesh",
       "ChMeshFileLoader",
-      "ChMeshFileLoader_ANCFShellFromGMFFile",
-      "ChMeshFileLoader_BSTShellFromObjFile",
-      "ChMeshFileLoader_FromAbaqusFile",
-      "ChMeshFileLoader_FromTetGenFile",
       "ChNodeFEAbase",
       "ChNodeFEAxyz",
       "ChNodeFEAxyzD",
@@ -1099,7 +628,6 @@
       "ChShellReissnerInternalData",
       "ChStrainStress3D",
       "NarrowphaseCallback",
-      "SHARED_PTR_DISOWN",
       "ShellANCF",
       "ShellANCF_8Layer",
       "ShellBSTLayer",
@@ -1107,29 +635,9 @@
       "SwigPyIterator",
       "VisualizationCallback",
       "_SwigNonDynamicMeta",
-      "__builtin__",
-      "__builtins__",
-      "__cached__",
-      "__doc__",
-      "__file__",
-      "__loader__",
-      "__name__",
-      "__package__",
-      "__spec__",
-      "_fea",
-      "_swig_add_metaclass",
-      "_swig_python_version_info",
-      "_swig_repr",
-      "_swig_setattr_nondynamic_class_variable",
-      "_swig_setattr_nondynamic_instance_variable",
-      "cvar",
       "double_ptr",
-      "double_ptr_frompointer",
       "float_ptr",
-      "float_ptr_frompointer",
       "int_ptr",
-      "int_ptr_frompointer",
-      "pychrono",
       "vector_ChElementBase",
       "vector_ChElementBeamANCF_3243",
       "vector_ChElementBeamANCF_3333",
@@ -1142,231 +650,21 @@
       "vector_ChNodeFEAxyzD",
       "vector_ChNodeFEAxyzDD",
       "vector_ChNodeFEAxyzDDD",
-      "vector_ChNodeFEAxyzrot",
-      "weakref"
+      "vector_ChNodeFEAxyzrot"
     ],
     "pychrono.irrlicht": [
-      "A1R5G5B5toA8R8G8B8",
-      "A1R5G5B5toR5G6B5",
-      "A8R8G8B8toA1R5G5B5",
-      "A8R8G8B8toR5G6B5",
       "CScreenQuad",
       "CShaderPreprocessor",
-      "CastToChVisualSystemIrrlicht",
       "ChIrrNodeModel",
       "ChIrrNodeShape",
       "ChVisualSystemIrrlicht",
-      "ContactsDrawMode_CONTACT_DISTANCES",
-      "ContactsDrawMode_CONTACT_FORCES",
-      "ContactsDrawMode_CONTACT_FORCES_N",
-      "ContactsDrawMode_CONTACT_NONE",
-      "ContactsDrawMode_CONTACT_NORMALS",
-      "ContactsLabelMode_CONTACT_DISTANCES_VAL",
-      "ContactsLabelMode_CONTACT_FORCES_N_VAL",
-      "ContactsLabelMode_CONTACT_FORCES_T_VAL",
-      "ContactsLabelMode_CONTACT_FORCES_VAL",
-      "ContactsLabelMode_CONTACT_NONE_VAL",
-      "ContactsLabelMode_CONTACT_TORQUES_R_VAL",
-      "ContactsLabelMode_CONTACT_TORQUES_S_VAL",
-      "ContactsLabelMode_CONTACT_TORQUES_VAL",
       "DepthShaderCB",
-      "EAAM_ALPHA_TO_COVERAGE",
-      "EAAM_FULL_BASIC",
-      "EAAM_LINE_SMOOTH",
-      "EAAM_OFF",
-      "EAAM_POINT_SMOOTH",
-      "EAAM_QUALITY",
-      "EAAM_SIMPLE",
-      "EAS_NONE",
-      "EAS_TEXTURE",
-      "EAS_VERTEX_COLOR",
-      "EBF_DST_ALPHA",
-      "EBF_DST_COLOR",
-      "EBF_ONE",
-      "EBF_ONE_MINUS_DST_ALPHA",
-      "EBF_ONE_MINUS_DST_COLOR",
-      "EBF_ONE_MINUS_SRC_ALPHA",
-      "EBF_ONE_MINUS_SRC_COLOR",
-      "EBF_SRC_ALPHA",
-      "EBF_SRC_ALPHA_SATURATE",
-      "EBF_SRC_COLOR",
-      "EBF_ZERO",
-      "EBO_ADD",
-      "EBO_MAX",
-      "EBO_MAX_ALPHA",
-      "EBO_MAX_FACTOR",
-      "EBO_MIN",
-      "EBO_MIN_ALPHA",
-      "EBO_MIN_FACTOR",
-      "EBO_NONE",
-      "EBO_REVSUBTRACT",
-      "EBO_SUBTRACT",
-      "ECFN_ALWAYS",
-      "ECFN_EQUAL",
-      "ECFN_GREATER",
-      "ECFN_GREATEREQUAL",
-      "ECFN_LESS",
-      "ECFN_LESSEQUAL",
-      "ECFN_NEVER",
-      "ECFN_NOTEQUAL",
-      "ECF_A16B16G16R16F",
-      "ECF_A1R5G5B5",
-      "ECF_A32B32G32R32F",
-      "ECF_A8R8G8B8",
-      "ECF_G16R16F",
-      "ECF_G32R32F",
-      "ECF_R16F",
-      "ECF_R32F",
-      "ECF_R5G6B5",
-      "ECF_R8G8B8",
-      "ECF_UNKNOWN",
-      "ECM_AMBIENT",
-      "ECM_DIFFUSE",
-      "ECM_DIFFUSE_AND_AMBIENT",
-      "ECM_EMISSIVE",
-      "ECM_NONE",
-      "ECM_SPECULAR",
-      "ECP_ALL",
-      "ECP_ALPHA",
-      "ECP_BLUE",
-      "ECP_GREEN",
-      "ECP_NONE",
-      "ECP_RED",
-      "ECP_RGB",
-      "EET_GUI_EVENT",
-      "EET_JOYSTICK_INPUT_EVENT",
-      "EET_KEY_INPUT_EVENT",
-      "EET_LOG_TEXT_EVENT",
-      "EET_MOUSE_INPUT_EVENT",
-      "EET_USER_EVENT",
-      "EFT_12PCF",
-      "EFT_16PCF",
-      "EFT_4PCF",
-      "EFT_8PCF",
-      "EFT_COUNT",
-      "EFT_FOG_EXP",
-      "EFT_FOG_EXP2",
-      "EFT_FOG_LINEAR",
-      "EFT_NONE",
-      "EGET_BUTTON_CLICKED",
-      "EGET_CHECKBOX_CHANGED",
-      "EGET_COMBO_BOX_CHANGED",
-      "EGET_COUNT",
-      "EGET_DIRECTORY_SELECTED",
-      "EGET_EDITBOX_CHANGED",
-      "EGET_EDITBOX_ENTER",
-      "EGET_EDITBOX_MARKING_CHANGED",
-      "EGET_ELEMENT_CLOSED",
-      "EGET_ELEMENT_FOCUSED",
-      "EGET_ELEMENT_FOCUS_LOST",
-      "EGET_ELEMENT_HOVERED",
-      "EGET_ELEMENT_LEFT",
-      "EGET_FILE_CHOOSE_DIALOG_CANCELLED",
-      "EGET_FILE_SELECTED",
-      "EGET_LISTBOX_CHANGED",
-      "EGET_LISTBOX_SELECTED_AGAIN",
-      "EGET_MENU_ITEM_SELECTED",
-      "EGET_MESSAGEBOX_CANCEL",
-      "EGET_MESSAGEBOX_NO",
-      "EGET_MESSAGEBOX_OK",
-      "EGET_MESSAGEBOX_YES",
-      "EGET_SCROLL_BAR_CHANGED",
-      "EGET_SPINBOX_CHANGED",
-      "EGET_TABLE_CHANGED",
-      "EGET_TABLE_HEADER_CHANGED",
-      "EGET_TABLE_SELECTED_AGAIN",
-      "EGET_TAB_CHANGED",
-      "EGET_TREEVIEW_NODE_COLLAPS",
-      "EGET_TREEVIEW_NODE_COLLAPSE",
-      "EGET_TREEVIEW_NODE_DESELECT",
-      "EGET_TREEVIEW_NODE_EXPAND",
-      "EGET_TREEVIEW_NODE_SELECT",
-      "EGUIET_FORCE_32_BIT",
-      "ELR_DEVICE",
-      "ELR_HW_BUFFERS",
-      "ELR_RTTS",
-      "ELR_TEXTURES",
-      "EMBSM_EXTRA1",
-      "EMBSM_EXTRA2",
-      "EMBSM_FORCE_32_BIT",
-      "EMBSM_LEFT",
-      "EMBSM_MIDDLE",
-      "EMBSM_RIGHT",
-      "EMFN_MODULATE_1X",
-      "EMFN_MODULATE_2X",
-      "EMFN_MODULATE_4X",
-      "EMIE_COUNT",
-      "EMIE_LMOUSE_DOUBLE_CLICK",
-      "EMIE_LMOUSE_LEFT_UP",
-      "EMIE_LMOUSE_PRESSED_DOWN",
-      "EMIE_LMOUSE_TRIPLE_CLICK",
-      "EMIE_MMOUSE_DOUBLE_CLICK",
-      "EMIE_MMOUSE_LEFT_UP",
-      "EMIE_MMOUSE_PRESSED_DOWN",
-      "EMIE_MMOUSE_TRIPLE_CLICK",
-      "EMIE_MOUSE_MOVED",
-      "EMIE_MOUSE_WHEEL",
-      "EMIE_RMOUSE_DOUBLE_CLICK",
-      "EMIE_RMOUSE_LEFT_UP",
-      "EMIE_RMOUSE_PRESSED_DOWN",
-      "EMIE_RMOUSE_TRIPLE_CLICK",
-      "EPO_BACK",
-      "EPO_FRONT",
-      "ERT_AUX_BUFFER0",
-      "ERT_AUX_BUFFER1",
-      "ERT_AUX_BUFFER2",
-      "ERT_AUX_BUFFER3",
-      "ERT_AUX_BUFFER4",
-      "ERT_FRAME_BUFFER",
-      "ERT_MULTI_RENDER_TEXTURES",
-      "ERT_RENDER_TEXTURE",
-      "ERT_STEREO_BOTH_BUFFERS",
-      "ERT_STEREO_LEFT_BUFFER",
-      "ERT_STEREO_RIGHT_BUFFER",
-      "ESE_COUNT",
-      "ESE_GLSL",
-      "ESE_HLSL",
-      "ESM_BOTH",
-      "ESM_CAST",
-      "ESM_COUNT",
-      "ESM_EXCLUDE",
-      "ESM_RECEIVE",
-      "ESNRP_AUTOMATIC",
-      "ESNRP_CAMERA",
-      "ESNRP_LIGHT",
-      "ESNRP_NONE",
-      "ESNRP_SHADOW",
-      "ESNRP_SKY_BOX",
-      "ESNRP_SOLID",
-      "ESNRP_TRANSPARENT",
-      "ESNRP_TRANSPARENT_EFFECT",
-      "ESNT_CHIRRNODE_MODEL",
-      "ESNT_CHIRRNODE_SHAPE",
-      "ETC_CLAMP",
-      "ETC_CLAMP_TO_BORDER",
-      "ETC_CLAMP_TO_EDGE",
-      "ETC_MIRROR",
-      "ETC_MIRROR_CLAMP",
-      "ETC_MIRROR_CLAMP_TO_BORDER",
-      "ETC_MIRROR_CLAMP_TO_EDGE",
-      "ETC_REPEAT",
-      "ETS_COUNT",
-      "ETS_PROJECTION",
-      "ETS_TEXTURE_0",
-      "ETS_TEXTURE_1",
-      "ETS_TEXTURE_2",
-      "ETS_TEXTURE_3",
-      "ETS_VIEW",
-      "ETS_WORLD",
       "EffectHandler",
-      "FogTypeNames",
       "ICameraSceneNode",
       "IEventReceiver",
       "IGUIEnvironment",
       "IImage",
       "IImageWriter",
-      "IImage_getBitsPerPixelFromFormat",
-      "IImage_isRenderTargetOnlyFormat",
       "IMeshSceneNode",
       "IPostProcessingRenderCallback",
       "IReferenceCounted",
@@ -1376,41 +674,12 @@
       "IVideoDriver",
       "IWriteFile",
       "IrrlichtDevice",
-      "IrrlichtDevice_isDriverSupported",
-      "LIGHT_MODULATE_P",
-      "LinkDrawMode_LINK_NONE",
-      "LinkDrawMode_LINK_REACT_FORCE",
-      "LinkDrawMode_LINK_REACT_TORQUE",
-      "LinkLabelMode_LINK_NONE_VAL",
-      "LinkLabelMode_LINK_REACT_FORCE_VAL",
-      "LinkLabelMode_LINK_REACT_FORCE_X",
-      "LinkLabelMode_LINK_REACT_FORCE_Y",
-      "LinkLabelMode_LINK_REACT_FORCE_Z",
-      "LinkLabelMode_LINK_REACT_TORQUE_VAL",
-      "LinkLabelMode_LINK_REACT_TORQUE_X",
-      "LinkLabelMode_LINK_REACT_TORQUE_Y",
-      "LinkLabelMode_LINK_REACT_TORQUE_Z",
-      "MATERIAL_MAX_TEXTURES",
-      "PolygonOffsetDirectionNames",
-      "R5G6B5toA1R5G5B5",
-      "R5G6B5toA8R8G8B8",
-      "RGB16",
-      "RGB16from16",
-      "RGBA16",
-      "SCREEN_QUAD_V",
       "SColor",
       "SColorHSL",
       "SColorf",
       "SDefineExp",
       "SEvent",
       "SGUIEvent",
-      "SHADOW_PASS_1P",
-      "SHADOW_PASS_1PT",
-      "SHADOW_PASS_1V",
-      "SHADOW_PASS_2P",
-      "SHADOW_PASS_2V",
-      "SHARED_PTR_DISOWN",
-      "SIMPLE_P",
       "SJoystickEvent",
       "SJoystickInfo",
       "SKeyInput",
@@ -1424,74 +693,16 @@
       "SUserEvent",
       "ShadowShaderCB",
       "SwigPyIterator",
-      "ToIrrlichtMaterial",
-      "ToIrrlichtSColor",
-      "ToIrrlichtSColorf",
-      "VSM_BLUR_P",
-      "WHITE_WASH_P",
-      "WHITE_WASH_P_ADD",
-      "X8R8G8B8toA1R5G5B5",
       "_SwigNonDynamicMeta",
-      "__builtin__",
-      "__builtins__",
-      "__cached__",
-      "__doc__",
-      "__file__",
-      "__loader__",
-      "__name__",
-      "__package__",
-      "__spec__",
-      "_irrlicht",
-      "_swig_add_metaclass",
-      "_swig_python_version_info",
-      "_swig_repr",
-      "_swig_setattr_nondynamic_class_variable",
-      "_swig_setattr_nondynamic_instance_variable",
-      "aTextureClampNames",
-      "alignIrrlichtNode",
-      "cvar",
       "dimension2du",
-      "drawAllBoundingBoxes",
-      "drawAllCOGs",
-      "drawAllContactLabels",
-      "drawAllContactPoints",
-      "drawAllLinkLabels",
-      "drawAllLinkframes",
-      "drawAllLinks",
-      "drawArrow",
-      "drawChFunction",
-      "drawCircle",
-      "drawColorbar",
-      "drawCoordsys",
-      "drawGrid",
-      "drawHUDviolation",
-      "drawLabel3D",
-      "drawPlot3D",
-      "drawPolyline",
-      "drawProfiler",
-      "drawRotSpring",
-      "drawSegment",
-      "drawSpring",
-      "getAlpha",
-      "getAverage",
-      "getBlue",
-      "getFileContent",
-      "getGreen",
-      "getRed",
-      "grabDefineExpressions",
       "matrix4CH",
-      "pack_textureBlendFunc",
-      "pychrono",
       "rectf",
       "recti",
-      "textureBlendFunc_hasAlpha",
-      "unpack_textureBlendFunc",
       "vector2df",
       "vector2di",
       "vector3df",
       "vector3dfCH",
-      "vector3di",
-      "weakref"
+      "vector3di"
     ],
     "pychrono.vehicle": [
       "ARTcar",
@@ -1529,78 +740,17 @@
       "BoxShape",
       "BrakeShafts",
       "BrakeSimple",
-      "BrakeType_SHAFTS",
-      "BrakeType_SIMPLE",
-      "CastToAutomaticTransmissionShafts",
-      "CastToAutomaticTransmissionSimpleMap",
-      "CastToChAutomaticTransmission",
-      "CastToChAutomaticTransmissionShafts",
-      "CastToChAutomaticTransmissionSimpleMap",
-      "CastToChBalancer",
-      "CastToChChassisConnectorArticulated",
-      "CastToChChassisConnectorHitch",
-      "CastToChChassisConnectorTorsion",
-      "CastToChDoubleWishbone",
-      "CastToChDoubleWishboneReduced",
-      "CastToChDrivelineWV",
-      "CastToChEngineShafts",
-      "CastToChEngineSimple",
-      "CastToChEngineSimpleMap",
-      "CastToChFialaTire",
-      "CastToChHendricksonPRIMAXX",
-      "CastToChLeafspringAxle",
-      "CastToChMacPhersonStrut",
-      "CastToChManualTransmission",
-      "CastToChManualTransmissionShafts",
-      "CastToChMultiLink",
-      "CastToChPac02Tire",
-      "CastToChPac89Tire",
-      "CastToChPitmanArm",
-      "CastToChPitmanArmShafts",
-      "CastToChRackPinion",
-      "CastToChReissnerTire",
-      "CastToChRigidChassis",
-      "CastToChRigidChassisRear",
-      "CastToChRigidPinnedAxle",
-      "CastToChRigidSuspension",
-      "CastToChRigidTire",
-      "CastToChRotaryArm",
-      "CastToChSemiTrailingArm",
-      "CastToChShaftsDriveline2WD",
-      "CastToChShaftsDriveline4WD",
-      "CastToChSimpleDriveline",
-      "CastToChSimpleDrivelineXWD",
-      "CastToChSingleWishbone",
-      "CastToChSolidAxle",
-      "CastToChSolidBellcrankThreeLinkAxle",
-      "CastToChSolidThreeLinkAxle",
-      "CastToChSuspensionTestRigVisualSystemIRR",
-      "CastToChTMeasyTire",
-      "CastToChThreeLinkIRS",
-      "CastToChToeBarLeafspringAxle",
-      "CastToChTrackedVehicleVisualSystemIrrlicht",
-      "CastToChWheeledVehicleVisualSystemIrrlicht",
-      "CastToEngineShafts",
-      "CastToEngineSimple",
-      "CastToEngineSimpleMap",
-      "CastToManualTransmissionShafts",
       "ChAABB",
       "ChAdaptiveSpeedController",
       "ChAutomaticTransmission",
       "ChAutomaticTransmissionShafts",
       "ChAutomaticTransmissionSimpleMap",
-      "ChAxis_X",
-      "ChAxis_Y",
-      "ChAxis_Z",
       "ChAxle",
       "ChAxleList",
       "ChBalancer",
       "ChBezierCurve",
       "ChBezierCurveTracker",
-      "ChBezierCurve_Read",
       "ChBodyGeometry",
-      "ChBodyGeometry_AddVisualizationCylinder",
-      "ChBodyGeometry_GetVisualizationTypeAsString",
       "ChBrake",
       "ChBrakeShafts",
       "ChBrakeSimple",
@@ -1611,7 +761,6 @@
       "ChChassisConnectorHitch",
       "ChChassisConnectorTorsion",
       "ChChassisRear",
-      "ChChassis_RemoveJoint",
       "ChClosedLoopDriver",
       "ChDataDriver",
       "ChDoubleTrackWheel",
@@ -1641,7 +790,6 @@
       "ChPac02Tire",
       "ChPac89Tire",
       "ChPart",
-      "ChPart_TransformInertiaMatrix",
       "ChPatchList",
       "ChPathFollowerACCDriver",
       "ChPathFollowerDriver",
@@ -1695,12 +843,10 @@
       "ChSuspensionTestRigPushrod",
       "ChSuspensionTestRigVisualSystemIRR",
       "ChTMeasyTire",
-      "ChTMeasyTire_GetTireMaxLoad",
       "ChTSDAGeometry",
       "ChTerrain",
       "ChThreeLinkIRS",
       "ChTire",
-      "ChTire_EstimateInertia",
       "ChToeBarLeafspringAxle",
       "ChTrackAssembly",
       "ChTrackAssemblyBand",
@@ -1739,21 +885,9 @@
       "ChWheeledVehicle",
       "ChWheeledVehicleVisualSystemIrrlicht",
       "ChWorldFrame",
-      "ChWorldFrame_Forward",
-      "ChWorldFrame_FromISO",
-      "ChWorldFrame_Height",
-      "ChWorldFrame_IsISO",
-      "ChWorldFrame_Project",
-      "ChWorldFrame_Quaternion",
-      "ChWorldFrame_Rotation",
-      "ChWorldFrame_Set",
-      "ChWorldFrame_SetYUP",
-      "ChWorldFrame_ToISO",
-      "ChWorldFrame_Vertical",
       "ChassisConnectorArticulated",
       "ChassisConnectorHitch",
       "ChassisConnectorTorsion",
-      "CirclePath",
       "CityBus",
       "CityBus_AutomaticTransmissionSimpleMap",
       "CityBus_BrakeShafts",
@@ -1771,40 +905,19 @@
       "CityBus_ToeBarLeafspringAxle",
       "CityBus_Vehicle",
       "CityBus_Wheel",
-      "CollisionType_HULLS",
-      "CollisionType_MESH",
-      "CollisionType_NONE",
-      "CollisionType_PRIMITIVES",
       "ConeShape",
       "ContactData",
       "ConvexHullsShape",
       "CylinderShape",
-      "DoubleLaneChangePath",
-      "DoublePinTrackShoeType_ONE_CONNECTOR",
-      "DoublePinTrackShoeType_TWO_CONNECTORS",
       "DoubleTrackWheel",
       "DoubleWishbone",
       "DoubleWishboneReduced",
-      "DrivelineTypeTV_BDS",
-      "DrivelineTypeTV_SIMPLE",
-      "DrivelineTypeWV_AWD",
-      "DrivelineTypeWV_AWD6",
-      "DrivelineTypeWV_AWD8",
-      "DrivelineTypeWV_FWD",
-      "DrivelineTypeWV_RWD",
-      "DrivelineTypeWV_SIMPLE",
-      "DrivelineTypeWV_SIMPLE_XWD",
       "DriverInputs",
-      "EngineModelType_SHAFTS",
-      "EngineModelType_SIMPLE",
-      "EngineModelType_SIMPLE_MAP",
       "EngineShafts",
       "EngineSimple",
       "EngineSimpleMap",
       "Entry",
       "ExternalForceTorque",
-      "ExtractPartTag",
-      "ExtractVehicleTag",
       "FEDA",
       "FEDA_AutomaticTransmissionSimpleMap",
       "FEDA_BrakeShafts",
@@ -1844,11 +957,6 @@
       "Gator_TMeasyTire_Rear",
       "Gator_Vehicle",
       "Gator_Wheel",
-      "Generate",
-      "GetDataFile",
-      "GetDataPath",
-      "GuidePinType_CENTRAL_PIN",
-      "GuidePinType_LATERAL_PIN",
       "HMMWV",
       "HMMWV_AutomaticTransmissionShafts",
       "HMMWV_AutomaticTransmissionSimpleMap",
@@ -1880,11 +988,9 @@
       "HMMWV_Wheel",
       "HeightFunctor",
       "HendricksonPRIMAXX",
-      "INNER",
       "Kraz",
       "Kraz_tractor",
       "Kraz_trailer",
-      "LEFT",
       "LeafspringAxle",
       "LineShape",
       "M113",
@@ -1961,44 +1067,11 @@
       "MultiLink",
       "NodeInfo",
       "NormalFunctor",
-      "OUTER",
       "Pac02Tire",
       "Pac89Tire",
       "Patch",
       "PitmanArm",
-      "RIGHT",
       "RackPinion",
-      "ReadAntirollbarJSON",
-      "ReadBrakeJSON",
-      "ReadBushingDataJSON",
-      "ReadChassisConnectorJSON",
-      "ReadChassisJSON",
-      "ReadChassisRearJSON",
-      "ReadColorJSON",
-      "ReadCoordinateSystemJSON",
-      "ReadDrivelineTVJSON",
-      "ReadDrivelineWVJSON",
-      "ReadEngineJSON",
-      "ReadFileJSON",
-      "ReadIdlerJSON",
-      "ReadMaterialInfoJSON",
-      "ReadQuaternionJSON",
-      "ReadRSDAFunctorJSON",
-      "ReadSteeringJSON",
-      "ReadSubchassisJSON",
-      "ReadSuspensionJSON",
-      "ReadTSDAFunctorJSON",
-      "ReadTSDAGeometryJSON",
-      "ReadTireJSON",
-      "ReadTrackAssemblyJSON",
-      "ReadTrackBrakeJSON",
-      "ReadTrackSuspensionJSON",
-      "ReadTrackWheelJSON",
-      "ReadTransmissionJSON",
-      "ReadVectorJSON",
-      "ReadVehicleGeometryJSON",
-      "ReadVehicleJointTypeJSON",
-      "ReadWheelJSON",
       "RigidChassis",
       "RigidChassisRear",
       "RigidTerrain",
@@ -2008,8 +1081,6 @@
       "SCMContactableData",
       "SCMLoader",
       "SCMTerrain",
-      "SHARED_PTR_DISOWN",
-      "SINGLE",
       "Sedan",
       "Sedan_AutomaticTransmissionSimpleMap",
       "Sedan_BrakeShafts",
@@ -2025,7 +1096,6 @@
       "Sedan_Wheel",
       "SegmentShape",
       "SemiTrailingArm",
-      "SetDataPath",
       "ShaftsDriveline2WD",
       "ShaftsDriveline4WD",
       "SimpleDriveline",
@@ -2042,46 +1112,11 @@
       "SprocketBand",
       "SprocketDoublePin",
       "SprocketSinglePin",
-      "SteeringTypeWV_PITMAN_ARM",
-      "SteeringTypeWV_PITMAN_ARM_SHAFTS",
-      "SteeringTypeWV_RACK_PINION",
-      "StraightLinePath",
-      "SuspensionTypeWV_DEDION_AXLE",
-      "SuspensionTypeWV_DOUBLE_WISHBONE",
-      "SuspensionTypeWV_DOUBLE_WISHBONE_REDUCED",
-      "SuspensionTypeWV_HENDRICKSON_PRIMAXX",
-      "SuspensionTypeWV_LEAF_SPRING_AXLE",
-      "SuspensionTypeWV_MACPHERSON_STRUT",
-      "SuspensionTypeWV_MULTI_LINK",
-      "SuspensionTypeWV_PUSHPIPE_AXLE",
-      "SuspensionTypeWV_RIGID_PINNED",
-      "SuspensionTypeWV_RIGID_SUSPENSION",
-      "SuspensionTypeWV_SAE_LEAF_SPRING_AXLE",
-      "SuspensionTypeWV_SAE_TOE_BAR_LEAF_SPRING_AXLE",
-      "SuspensionTypeWV_SEMI_TRAILING_ARM",
-      "SuspensionTypeWV_SOLID_AXLE",
-      "SuspensionTypeWV_SOLID_BELLCRANK_THREE_LINK_AXLE",
-      "SuspensionTypeWV_SOLID_THREE_LINK_AXLE",
-      "SuspensionTypeWV_THREE_LINK_IRS",
-      "SuspensionTypeWV_TOEBAR_DEDION_AXLE",
-      "SuspensionTypeWV_TOEBAR_PUSHPIPE_AXLE",
-      "SuspensionTypeWV_TOE_BAR_LEAF_SPRING_AXLE",
       "SwigPyIterator",
       "TMeasyTire",
       "TerrainForce",
       "TerrainForces",
       "ThreeLinkIRS",
-      "TireModelType_ANCF",
-      "TireModelType_ANCF_LUMPED",
-      "TireModelType_FEA",
-      "TireModelType_FIALA",
-      "TireModelType_PAC02",
-      "TireModelType_PAC89",
-      "TireModelType_REISSNER",
-      "TireModelType_RIGID",
-      "TireModelType_RIGID_MESH",
-      "TireModelType_TMEASY",
-      "TireModelType_TMSIMPLE",
       "ToeBarLeafspringAxle",
       "TrackAssemblyBandANCF",
       "TrackAssemblyBandBushing",
@@ -2094,17 +1129,9 @@
       "TrackShoeBandBushing",
       "TrackShoeDoublePin",
       "TrackShoeSinglePin",
-      "TrackShoeType_BAND_ANCF",
-      "TrackShoeType_BAND_BUSHING",
-      "TrackShoeType_DOUBLE_PIN",
-      "TrackShoeType_SINGLE_PIN",
       "TrackedVehicle",
       "TranslationalDamperSuspension",
       "TranslationalIdler",
-      "TransmissionModelType_AUTOMATIC_SHAFTS",
-      "TransmissionModelType_AUTOMATIC_SIMPLE_CVT",
-      "TransmissionModelType_AUTOMATIC_SIMPLE_MAP",
-      "TransmissionModelType_MANUAL_SHAFTS",
       "TrimeshShape",
       "UAZBUS",
       "UAZBUS_AutomaticTransmissionSimpleMap",
@@ -2125,718 +1152,6182 @@
       "UAZBUS_ToeBarLeafspringAxle",
       "UAZBUS_Vehicle",
       "UAZBUS_Wheel",
-      "VisualizationType_COLLISION",
-      "VisualizationType_MESH",
-      "VisualizationType_NONE",
-      "VisualizationType_PRIMITIVES",
       "Wheel",
       "WheelState",
       "WheelStates",
       "WheeledTrailer",
       "WheeledVehicle",
       "_SwigNonDynamicMeta",
-      "__builtin__",
-      "__builtins__",
-      "__cached__",
-      "__doc__",
-      "__file__",
-      "__loader__",
-      "__name__",
-      "__package__",
-      "__spec__",
-      "_swig_add_metaclass",
-      "_swig_python_version_info",
-      "_swig_repr",
-      "_swig_setattr_nondynamic_class_variable",
-      "_swig_setattr_nondynamic_instance_variable",
-      "_vehicle",
-      "copy_doublep",
-      "copy_intp",
-      "delete_doublep",
-      "delete_intp",
       "dimension2du",
-      "doublep_assign",
-      "doublep_value",
-      "intp_assign",
-      "intp_value",
-      "new_doublep",
-      "new_intp",
-      "pychrono",
       "vector_Entry",
       "vector_double",
-      "vector_int",
-      "weakref"
+      "vector_int"
     ]
   },
   "overloads": {
-    "pychrono.AddBiSphereGeometry": [
+    "pychrono.core.BoxShape": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double cDist",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddBoxContainer": [
-      [
-        "ChBody  body",
-        "ChContactMaterial",
-        "ChFramed frame",
-        "ChVector3d size",
-        "double thickness",
-        "ChVector3i faces",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddBoxGeometry": [
-      [
-        "ChBody body",
-        "ChContactMaterial",
-        "ChVector3d size",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddCapsuleGeometry": [
-      [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double height",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddConeGeometry": [
-      [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double height",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddConvexCollisionModel": [
-      [
-        "ChBody  body",
-        "ChContactMaterial",
-        "ChTriangleMeshConnected  convex_mesh",
-        "ChConvexDecompositionHACDv2 convex_shape",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool use_original_asset=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChVector3d",
+        "int"
       ],
       [
-        "ChBody  body",
-        "ChContactMaterial",
-        "ChTriangleMeshConnected  convex_mesh",
-        "vector_vector_ChVector3d convex_hulls",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChBox",
+        "int"
       ]
     ],
-    "pychrono.AddCylinderGeometry": [
+    "pychrono.core.ChAABB": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double height",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChVector3d",
+        "ChVector3d"
       ],
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "ChVector3d p1",
-        "ChVector3d p2",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChIntAABB",
+        "double"
       ]
     ],
-    "pychrono.AddEllipsoidGeometry": [
+    "pychrono.core.ChAbsorbedPowerVertical": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "ChVector3d axes",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "double"
       ]
     ],
-    "pychrono.AddRoundedBoxGeometry": [
+    "pychrono.core.ChAssembly": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "ChVector3d size",
-        "double srad",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChAssembly"
       ]
     ],
-    "pychrono.AddRoundedCylinderGeometry": [
+    "pychrono.core.ChAssemblyAnalysis": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double height",
-        "double srad",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
+        "ChIntegrableIIorder"
       ]
     ],
-    "pychrono.AddSphereGeometry": [
+    "pychrono.core.ChBezierCurve": [
       [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddTorusGeometry": [
-      [
-        "ChBody body",
-        "ChContactMaterial",
-        "double radius",
-        "double thickness",
-        "int segments=20",
-        "int angle=360",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.AddTriangleGeometry": [
-      [
-        "ChBody body",
-        "ChContactMaterial",
-        "ChVector3d vertA",
-        "ChVector3d vertB",
-        "ChVector3d vertC",
-        "std::string  name",
-        "ChVector3d pos=ChVector3d(0",
-        "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaterniond(1",
-        "0",
-        "0",
-        "0)",
-        "bool visualization=True",
-        "ChVisualMaterialSharedPtr vis_material=ChVisualMaterial::Default()"
-      ]
-    ],
-    "pychrono.ChClassFactory_ClassRegister": [
-      [
-        "std::string  keyName",
-        "ChClassRegistrationBase * mregistration"
-      ]
-    ],
-    "pychrono.ChClassFactory_ClassUnregister": [
-      [
-        "std::string  keyName"
-      ]
-    ],
-    "pychrono.ChCollisionInfo_SetDefaultEffectiveCurvatureRadius": [
-      [
-        "double eff_radius"
-      ]
-    ],
-    "pychrono.ChCollisionModel_SetDefaultSuggestedEnvelope": [
-      [
-        "double envelope"
-      ]
-    ],
-    "pychrono.ChCollisionModel_SetDefaultSuggestedMargin": [
-      [
-        "double margin"
-      ]
-    ],
-    "pychrono.ChCollisionSystemBullet_SetContactBreakingThreshold": [
-      [
-        "double threshold"
-      ]
-    ],
-    "pychrono.ChJoint_Remove": [
-      [
-        "ChJoint  joint"
-      ]
-    ],
-    "pychrono.ChRandom_SetSeed": [
-      [
-        "double seed"
-      ]
-    ],
-    "pychrono.ChTriangleMeshConnected_WriteWavefront": [
-      [
-        "std::string  filename",
-        "ChTriangleMeshConnected_list meshes"
-      ]
-    ],
-    "pychrono.PasteMatrix": [
-      [
-        "ChSparseMatrix  matrTo",
-        "ChMatrixConstRef matrFrom",
-        "int start_row",
-        "int start_col",
-        "bool overwrite=True"
-      ]
-    ],
-    "pychrono.ReadCheckpoint": [
-      [
-        "ChSystem system",
-        "std::string  filename"
-      ]
-    ],
-    "pychrono.SetChronoDataPath": [
-      [
-        "std::string  path"
-      ]
-    ],
-    "pychrono.SetChronoOutputPath": [
-      [
-        "std::string  path"
-      ]
-    ],
-    "pychrono.StreamOut": [
-      [
-        "ChMatrixConstRef A",
-        "std::ostream  stream"
+        "vector_ChVector3d",
+        "vector_ChVector3d",
+        "vector_ChVector3d",
+        "bool"
       ],
       [
-        "ChSparseMatrix  mat",
-        "std::ostream  stream",
-        "bool one_indexed=False"
+        "vector_ChVector3d",
+        "bool"
       ]
     ],
-    "pychrono.WriteBodies": [
+    "pychrono.core.ChBezierCurveTracker": [
       [
-        "ChSystem system",
-        "std::string  filename",
-        "bool active_only=False",
-        "bool dump_vel=False",
-        "std::string  delim=\"",
-        "\""
+        "std::shared_ptr<"
       ]
     ],
-    "pychrono.WriteCamera": [
+    "pychrono.core.ChBody": [
       [
-        "std::string  filename",
-        "ChVector3d cam_location",
-        "ChVector3d cam_target",
-        "ChVector3d camera_upvec",
-        "std::string  delim=\"",
-        "\""
+        "ChBody"
       ]
     ],
-    "pychrono.WriteCurvePovray": [
+    "pychrono.core.ChBodyAuxRef": [
       [
-        "ChBezierCurve curve",
-        "std::string  curve_name",
-        "std::string  out_dir",
-        "double radius=0.03",
-        "ChColor col=ChColor(0.8f",
-        "0.8f",
-        "0.2f)"
+        "ChBodyAuxRef"
       ]
     ],
-    "pychrono.WriteMeshPovray": [
+    "pychrono.core.ChBodyEasyBox": [
       [
-        "ChTriangleMeshConnected trimesh",
-        "std::string  mesh_name",
-        "std::string  out_dir",
-        "ChColor color=ChColor(0.4f",
-        "0.4f",
-        "0.4f)",
-        "ChVector3d pos=ChVector3d(0",
+        "double",
+        "double",
+        "double",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyClusterOfSpheres": [
+      [
+        "vector_ChVector3d",
+        "std::vector<",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "vector_ChVector3d",
+        "std::vector<",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyConvexHull": [
+      [
+        "vector_ChVector3d",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "vector_ChVector3d",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyConvexHullAuxRef": [
+      [
+        "vector_ChVector3d",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "vector_ChVector3d",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyCylinder": [
+      [
+        "ChAxis",
+        "double",
+        "double",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "ChAxis",
+        "double",
+        "double",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyEllipsoid": [
+      [
+        "ChVector3d",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "ChVector3d",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyEasyMesh": [
+      [
+        "std::string",
+        "double",
+        "bool",
+        "bool",
+        "bool",
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "double",
+        "bool",
+        "bool",
+        "bool",
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::string",
+        "double",
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "double",
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChBodyEasySphere": [
+      [
+        "double",
+        "double",
+        "bool",
+        "bool",
+        "std::shared_ptr<"
+      ],
+      [
+        "double",
+        "double",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChBodyFrame": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
         "0",
-        "0)",
-        "ChQuaterniond rot=ChQuaternion< double >(1",
         "0",
-        "0",
-        "0)",
-        "bool smoothed=False"
+        "0)"
+      ],
+      [
+        "ChVector3d",
+        "ChMatrix33d"
+      ],
+      [
+        "ChCoordsysd"
+      ],
+      [
+        "ChFramed"
+      ],
+      [
+        "ChFrameMovingd"
       ]
     ],
-    "pychrono.WriteVisualizationAssets": [
+    "pychrono.core.ChBox": [
       [
-        "ChSystem system",
-        "std::string  filename",
-        "bool body_info=True",
-        "std::string  delim=\"",
+        "ChVector3d"
+      ],
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChBox"
+      ]
+    ],
+    "pychrono.core.ChButterworthHighpass": [
+      [
+        "int",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChButterworthLowpass": [
+      [
+        "int",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCapsule": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCapsule"
+      ]
+    ],
+    "pychrono.core.ChCollisionInfo": [
+      [
+        "ChCollisionInfo",
+        "bool"
+      ]
+    ],
+    "pychrono.core.ChCollisionModel": [
+      [
+        "ChCollisionModel"
+      ]
+    ],
+    "pychrono.core.ChCollisionShape": [
+      [
+        "ChCollisionShape::Type"
+      ],
+      [
+        "ChCollisionShape::Type",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeArc2D": [
+      [
+        "std::shared_ptr<",
+        "ChLineArc",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeBarrel": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeBox": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChVector3d"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChBox"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeCapsule": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChCapsule"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeCone": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChCone"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeConvexHull": [
+      [
+        "std::shared_ptr<",
+        "vector_ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeCylinder": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChCylinder"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeCylindricalShell": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChCylinder"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeEllipsoid": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChVector3d"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChEllipsoid"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapePath2D": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapePoint": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeRoundedBox": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChRoundedBox"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeRoundedCylinder": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChRoundedCylinder"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeSegment2D": [
+      [
+        "std::shared_ptr<",
+        "ChLineSegment",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeSphere": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChSphere"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeTriangle": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChTriangle"
+      ]
+    ],
+    "pychrono.core.ChCollisionShapeTriangleMesh": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "bool",
+        "bool",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChColor": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChColor"
+      ]
+    ],
+    "pychrono.core.ChColormap": [
+      [
+        "ChColormap::Type"
+      ]
+    ],
+    "pychrono.core.ChCone": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCone"
+      ]
+    ],
+    "pychrono.core.ChConstantDistribution": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChContactContainer": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChContactMaterialCompositeNSC": [
+      [
+        "ChContactMaterial",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChContactMaterialCompositeSMC": [
+      [
+        "ChContactMaterial",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChContactMaterialData": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChContactMaterialNSC": [
+      [
+        "ChContactMaterial"
+      ]
+    ],
+    "pychrono.core.ChContactMaterialSMC": [
+      [
+        "ChContactMaterial"
+      ]
+    ],
+    "pychrono.core.ChContinuumDistribution": [
+      [
+        "ChVectorDynamicd",
+        "ChVectorDynamicd"
+      ]
+    ],
+    "pychrono.core.ChControllerPID": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChControllerPID"
+      ]
+    ],
+    "pychrono.core.ChConveyor": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChConveyor"
+      ]
+    ],
+    "pychrono.core.ChCoordsysd": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "0",
+        "0",
+        "0)"
+      ],
+      [
+        "ChVector3d",
+        "double",
+        "ChVector3d"
+      ],
+      [
+        "ChCoordsysd"
+      ]
+    ],
+    "pychrono.core.ChCylinder": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCylinder"
+      ]
+    ],
+    "pychrono.core.ChDiscreteDistribution": [
+      [
+        "ChVectorDynamicd",
+        "ChVectorDynamicd"
+      ]
+    ],
+    "pychrono.core.ChEllipsoid": [
+      [
+        "ChVector3d"
+      ],
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChEllipsoid"
+      ]
+    ],
+    "pychrono.core.ChFeeder": [
+      [
+        "ChFeeder"
+      ]
+    ],
+    "pychrono.core.ChFilterD": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChFilterI": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChFilterPD1": [
+      [
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChFilterPDT1": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChFilterPT1": [
+      [
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChForce": [
+      [
+        "ChForce"
+      ]
+    ],
+    "pychrono.core.ChForceList": [
+      [
+        "ChForceList"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.core.ChFrameMovingd": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "0",
+        "0",
+        "0)"
+      ],
+      [
+        "ChVector3d",
+        "ChMatrix33d"
+      ],
+      [
+        "ChCoordsysd"
+      ],
+      [
+        "ChFramed"
+      ],
+      [
+        "ChFrameMovingd"
+      ]
+    ],
+    "pychrono.core.ChFramed": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "0",
+        "0",
+        "0)"
+      ],
+      [
+        "ChVector3d",
+        "ChMatrix33d"
+      ],
+      [
+        "ChVector3d",
+        "double",
+        "ChVector3d"
+      ],
+      [
+        "ChCoordsysd"
+      ],
+      [
+        "ChFramed"
+      ]
+    ],
+    "pychrono.core.ChFseqNode": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "ChFseqNode"
+      ]
+    ],
+    "pychrono.core.ChFunction": [
+      [
+        "ChFunction"
+      ]
+    ],
+    "pychrono.core.ChFunctionBSpline": [
+      [
+        "int",
+        "ChVectorDynamicd",
+        "ChVectorDynamicd"
+      ],
+      [
+        "int",
+        "ChVectorDynamicd",
+        "ChVectorDynamicd",
+        "ChVectorDynamicI",
+        "ChVectorDynamicd"
+      ],
+      [
+        "ChFunctionBSpline"
+      ]
+    ],
+    "pychrono.core.ChFunctionConst": [
+      [
+        "double"
+      ],
+      [
+        "ChFunctionConst"
+      ]
+    ],
+    "pychrono.core.ChFunctionConstAcc": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionConstAcc"
+      ]
+    ],
+    "pychrono.core.ChFunctionConstJerk": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "bool",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionConstJerk"
+      ]
+    ],
+    "pychrono.core.ChFunctionCycloidal": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionCycloidal"
+      ]
+    ],
+    "pychrono.core.ChFunctionDerivative": [
+      [
+        "ChFunctionDerivative"
+      ]
+    ],
+    "pychrono.core.ChFunctionFillet3": [
+      [
+        "ChFunctionFillet3"
+      ]
+    ],
+    "pychrono.core.ChFunctionIntegral": [
+      [
+        "ChFunctionIntegral"
+      ]
+    ],
+    "pychrono.core.ChFunctionInterp": [
+      [
+        "ChFunctionInterp"
+      ]
+    ],
+    "pychrono.core.ChFunctionMirror": [
+      [
+        "ChFunctionMirror"
+      ]
+    ],
+    "pychrono.core.ChFunctionOperator": [
+      [
+        "ChFunctionOperator"
+      ]
+    ],
+    "pychrono.core.ChFunctionPoly": [
+      [
+        "ChFunctionPoly"
+      ]
+    ],
+    "pychrono.core.ChFunctionPoly23": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionPoly23"
+      ]
+    ],
+    "pychrono.core.ChFunctionPoly345": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionPoly345"
+      ]
+    ],
+    "pychrono.core.ChFunctionPosition": [
+      [
+        "ChFunctionPosition"
+      ]
+    ],
+    "pychrono.core.ChFunctionPositionLine": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "ChFunctionPositionLine"
+      ]
+    ],
+    "pychrono.core.ChFunctionPositionSetpoint": [
+      [
+        "ChFunctionPositionSetpoint"
+      ]
+    ],
+    "pychrono.core.ChFunctionPositionXYZFunctions": [
+      [
+        "ChFunctionPositionXYZFunctions"
+      ]
+    ],
+    "pychrono.core.ChFunctionRamp": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionRamp"
+      ]
+    ],
+    "pychrono.core.ChFunctionRepeat": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionRepeat"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotation": [
+      [
+        "ChFunctionRotation"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotationABCFunctions": [
+      [
+        "ChFunctionRotationABCFunctions"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotationAxis": [
+      [
+        "ChFunctionRotationAxis"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotationBSpline": [
+      [
+        "int",
+        "vector_ChQuaterniond",
+        "ChVectorDynamicd"
+      ],
+      [
+        "ChFunctionRotationBSpline"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotationSQUAD": [
+      [
+        "vector_ChQuaterniond",
+        "ChVectorDynamicd"
+      ],
+      [
+        "ChFunctionRotationSQUAD"
+      ]
+    ],
+    "pychrono.core.ChFunctionRotationSetpoint": [
+      [
+        "ChFunctionRotationSetpoint"
+      ]
+    ],
+    "pychrono.core.ChFunctionSequence": [
+      [
+        "ChFunctionSequence"
+      ]
+    ],
+    "pychrono.core.ChFunctionSetpoint": [
+      [
+        "ChFunctionSetpoint"
+      ]
+    ],
+    "pychrono.core.ChFunctionSetpointCallback": [
+      [
+        "ChFunctionSetpointCallback"
+      ]
+    ],
+    "pychrono.core.ChFunctionSine": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChFunctionSine"
+      ]
+    ],
+    "pychrono.core.ChFunctionSineStep": [
+      [
+        "ChVector2d",
+        "ChVector2d"
+      ],
+      [
+        "ChFunctionSineStep"
+      ]
+    ],
+    "pychrono.core.ChISO2631_1_AVTransition": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_1_UpwardStep": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_1_Wd": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_1_Wf": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_1_Wk": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_Shock_SeatCushionLogger": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChISO2631_Vibration_SeatCushionLogger": [
+      [
+        "double"
+      ]
+    ],
+    "pychrono.core.ChIndexedNodes": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChIndexedParticles": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChIntAABB": [
+      [
+        "ChVector3i",
+        "ChVector3i"
+      ]
+    ],
+    "pychrono.core.ChJoint": [
+      [
+        "ChJoint::Type",
+        "std::string",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFramed",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLineArc": [
+      [
+        "ChCoordsysd",
+        "double",
+        "double",
+        "double",
+        "bool"
+      ],
+      [
+        "ChLineArc"
+      ]
+    ],
+    "pychrono.core.ChLineBSpline": [
+      [
+        "int",
+        "vector_ChVector3d",
+        "ChVectorDynamicd"
+      ],
+      [
+        "ChLineBSpline"
+      ]
+    ],
+    "pychrono.core.ChLineBezier": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "std::string"
+      ],
+      [
+        "ChLineBezier"
+      ]
+    ],
+    "pychrono.core.ChLineCam": [
+      [
+        "ChLineCam"
+      ]
+    ],
+    "pychrono.core.ChLineNurbs": [
+      [
+        "int",
+        "vector_ChVector3d",
+        "ChVectorDynamicd",
+        "ChVectorDynamicd"
+      ],
+      [
+        "ChLineNurbs"
+      ]
+    ],
+    "pychrono.core.ChLinePath": [
+      [
+        "ChLinePath"
+      ]
+    ],
+    "pychrono.core.ChLinePoly": [
+      [
+        "int"
+      ],
+      [
+        "ChLinePoly"
+      ]
+    ],
+    "pychrono.core.ChLineSegment": [
+      [
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChLineSegment"
+      ]
+    ],
+    "pychrono.core.ChLink": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChLinkBase": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChLinkBushing": [
+      [
+        "ChLinkBushing::Type"
+      ]
+    ],
+    "pychrono.core.ChLinkDistance": [
+      [
+        "ChLinkDistance"
+      ]
+    ],
+    "pychrono.core.ChLinkForce": [
+      [
+        "ChLinkForce"
+      ]
+    ],
+    "pychrono.core.ChLinkLimit": [
+      [
+        "ChLinkLimit"
+      ]
+    ],
+    "pychrono.core.ChLinkLock": [
+      [
+        "ChLinkLock"
+      ]
+    ],
+    "pychrono.core.ChLinkLockGear": [
+      [
+        "ChLinkLockGear"
+      ]
+    ],
+    "pychrono.core.ChLinkLockLinActuator": [
+      [
+        "ChLinkLockLinActuator"
+      ]
+    ],
+    "pychrono.core.ChLinkLockLock": [
+      [
+        "ChLinkLockLock"
+      ]
+    ],
+    "pychrono.core.ChLinkLockPointSpline": [
+      [
+        "ChLinkLockPointSpline"
+      ]
+    ],
+    "pychrono.core.ChLinkLockPulley": [
+      [
+        "ChLinkLockPulley"
+      ]
+    ],
+    "pychrono.core.ChLinkLockScrew": [
+      [
+        "ChLinkLockScrew"
+      ]
+    ],
+    "pychrono.core.ChLinkLockTrajectory": [
+      [
+        "ChLinkLockTrajectory"
+      ]
+    ],
+    "pychrono.core.ChLinkMarkers": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChLinkMate": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChLinkMateCylindrical": [
+      [
+        "ChLinkMateCylindrical"
+      ]
+    ],
+    "pychrono.core.ChLinkMateDistanceZ": [
+      [
+        "ChLinkMateDistanceZ"
+      ]
+    ],
+    "pychrono.core.ChLinkMateFix": [
+      [
+        "ChLinkMateFix"
+      ]
+    ],
+    "pychrono.core.ChLinkMateGeneric": [
+      [
+        "bool",
+        "bool",
+        "bool",
+        "bool",
+        "bool",
+        "bool"
+      ],
+      [
+        "ChLinkMateGeneric"
+      ]
+    ],
+    "pychrono.core.ChLinkMateOrthogonal": [
+      [
+        "ChLinkMateOrthogonal"
+      ]
+    ],
+    "pychrono.core.ChLinkMateParallel": [
+      [
+        "ChLinkMateParallel"
+      ]
+    ],
+    "pychrono.core.ChLinkMatePlanar": [
+      [
+        "ChLinkMatePlanar"
+      ]
+    ],
+    "pychrono.core.ChLinkMatePrismatic": [
+      [
+        "ChLinkMatePrismatic"
+      ]
+    ],
+    "pychrono.core.ChLinkMateRackPinion": [
+      [
+        "ChLinkMateRackPinion"
+      ]
+    ],
+    "pychrono.core.ChLinkMateRevolute": [
+      [
+        "ChLinkMateRevolute"
+      ]
+    ],
+    "pychrono.core.ChLinkMateSpherical": [
+      [
+        "ChLinkMateSpherical"
+      ]
+    ],
+    "pychrono.core.ChLinkMotionImposed": [
+      [
+        "ChLinkMotionImposed"
+      ]
+    ],
+    "pychrono.core.ChLinkMotor": [
+      [
+        "ChLinkMotor"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorLinear": [
+      [
+        "ChLinkMotor"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorLinearDriveline": [
+      [
+        "ChLinkMotorLinearDriveline"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorLinearForce": [
+      [
+        "ChLinkMotorLinearForce"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorLinearPosition": [
+      [
+        "ChLinkMotorLinearPosition"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorLinearSpeed": [
+      [
+        "ChLinkMotorLinearSpeed"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorRotation": [
+      [
+        "ChLinkMotor"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorRotationAngle": [
+      [
+        "ChLinkMotorRotationAngle"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorRotationDriveline": [
+      [
+        "ChLinkMotorRotationDriveline"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorRotationSpeed": [
+      [
+        "ChLinkMotorRotationSpeed"
+      ]
+    ],
+    "pychrono.core.ChLinkMotorRotationTorque": [
+      [
+        "ChLinkMotorRotationTorque"
+      ]
+    ],
+    "pychrono.core.ChLinkRSDA": [
+      [
+        "ChLinkRSDA"
+      ]
+    ],
+    "pychrono.core.ChLinkRevolute": [
+      [
+        "ChLinkRevolute"
+      ]
+    ],
+    "pychrono.core.ChLinkRevoluteSpherical": [
+      [
+        "ChLinkRevoluteSpherical"
+      ]
+    ],
+    "pychrono.core.ChLinkTSDA": [
+      [
+        "ChLinkTSDA"
+      ]
+    ],
+    "pychrono.core.ChLinkUniversal": [
+      [
+        "ChLinkUniversal"
+      ]
+    ],
+    "pychrono.core.ChLoad": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBody": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBodyBushingGeneric": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFramed",
+        "ChMatrix66d",
+        "ChMatrix66d"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBodyBushingMate": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFramed",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBodyBushingPlastic": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFramed",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBodyBushingSpherical": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFramed",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyBodyTorque": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChVector3d",
+        "bool"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyForce": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "bool",
+        "ChVector3d",
+        "bool"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyInertia": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "double",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadBodyTorque": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d",
+        "bool"
+      ]
+    ],
+    "pychrono.core.ChLoadContainer": [
+      [
+        "ChLoadContainer"
+      ]
+    ],
+    "pychrono.core.ChLoadCustom": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadCustomMultiple": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZ": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZBody": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZBodyBushing": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZBodySpring": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZForce": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZForceAbs": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZNodeXYZ": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZNodeXYZBushing": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoadNodeXYZNodeXYZSpring": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChLoaderForceOnSurface": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderGravity": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderNodeXYZ": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderPressure": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderU": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUV": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUVW": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUVWatomic": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChLoaderUVWdistributed": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUVatomic": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUVdistributed": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUatomic": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLoaderUdistributed": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChLumpingParms": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChMarker": [
+      [
+        "std::string",
+        "ChBody",
+        "ChCoordsysd",
+        "ChCoordsysd",
+        "ChCoordsysd"
+      ],
+      [
+        "ChMarker"
+      ]
+    ],
+    "pychrono.core.ChMarkerList": [
+      [
+        "ChMarkerList"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.core.ChMatrix33d": [
+      [
+        "double"
+      ],
+      [
+        "ChVector3d"
+      ],
+      [
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChQuaterniond"
+      ],
+      [
+        "double",
+        "ChVector3d"
+      ],
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChMatrixDynamicd": [
+      [
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.core.ChMesh": [
+      [
+        "ChMesh"
+      ]
+    ],
+    "pychrono.core.ChMotionFilterSecondOrder": [
+      [
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChMotionFilterThirdOrder": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChMovingAverage": [
+      [
+        "ChVectorDynamicd",
+        "int"
+      ]
+    ],
+    "pychrono.core.ChNormalDistribution": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChParticleBase": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "0",
+        "0",
+        "0)"
+      ],
+      [
+        "ChVector3d",
+        "ChMatrix33d"
+      ],
+      [
+        "ChCoordsysd"
+      ],
+      [
+        "ChFramed"
+      ],
+      [
+        "ChFrameMovingd"
+      ]
+    ],
+    "pychrono.core.ChParticleCloud": [
+      [
+        "ChParticleCloud"
+      ]
+    ],
+    "pychrono.core.ChParticleEventFlowInRectangle": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChParticleProcessEventMassDistribution": [
+      [
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.core.ChPhysicsItem": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChProximityContainer": [
+      [
+        "ChPhysicsItem"
+      ]
+    ],
+    "pychrono.core.ChQuaterniond": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "ChVector3d"
+      ],
+      [
+        "ChQuaterniond"
+      ]
+    ],
+    "pychrono.core.ChQuaternionf": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "ChVector3f"
+      ],
+      [
+        "ChQuaternionf"
+      ]
+    ],
+    "pychrono.core.ChRoundedBox": [
+      [
+        "ChVector3d",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChRoundedBox"
+      ]
+    ],
+    "pychrono.core.ChRoundedCylinder": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChRoundedCylinder"
+      ]
+    ],
+    "pychrono.core.ChRunningAverage": [
+      [
+        "int"
+      ]
+    ],
+    "pychrono.core.ChShaft": [
+      [
+        "ChShaft"
+      ]
+    ],
+    "pychrono.core.ChShaftBodyRotation": [
+      [
+        "ChShaftBodyRotation"
+      ]
+    ],
+    "pychrono.core.ChShaftBodyTranslation": [
+      [
+        "ChShaftBodyTranslation"
+      ]
+    ],
+    "pychrono.core.ChShaftsAppliedTorque": [
+      [
+        "ChShaftsAppliedTorque"
+      ]
+    ],
+    "pychrono.core.ChShaftsClutch": [
+      [
+        "ChShaftsClutch"
+      ]
+    ],
+    "pychrono.core.ChShaftsCouple": [
+      [
+        "ChShaftsCouple"
+      ]
+    ],
+    "pychrono.core.ChShaftsElasticGear": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChShaftsFreewheel": [
+      [
+        "ChShaftsFreewheel"
+      ]
+    ],
+    "pychrono.core.ChShaftsGear": [
+      [
+        "ChShaftsGear"
+      ]
+    ],
+    "pychrono.core.ChShaftsLoad": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChShaftsMotor": [
+      [
+        "ChShaftsCouple"
+      ]
+    ],
+    "pychrono.core.ChShaftsMotorLoad": [
+      [
+        "ChShaftsMotorLoad"
+      ]
+    ],
+    "pychrono.core.ChShaftsMotorPosition": [
+      [
+        "ChShaftsMotorPosition"
+      ]
+    ],
+    "pychrono.core.ChShaftsMotorSpeed": [
+      [
+        "ChShaftsMotorSpeed"
+      ]
+    ],
+    "pychrono.core.ChShaftsPlanetary": [
+      [
+        "ChShaftsPlanetary"
+      ]
+    ],
+    "pychrono.core.ChShaftsThermalEngine": [
+      [
+        "ChShaftsThermalEngine"
+      ]
+    ],
+    "pychrono.core.ChShaftsTorque": [
+      [
+        "ChShaftsCouple"
+      ]
+    ],
+    "pychrono.core.ChShaftsTorsionSpring": [
+      [
+        "ChShaftsTorsionSpring"
+      ]
+    ],
+    "pychrono.core.ChShaftsTorsionSpringDamper": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChSolverADMM": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChSphere": [
+      [
+        "double"
+      ],
+      [
+        "ChSphere"
+      ]
+    ],
+    "pychrono.core.ChState": [
+      [
+        "ChIntegrable"
+      ],
+      [
+        "Eigen::Index",
+        "ChIntegrable"
+      ],
+      [
+        "ChVectorConstRef",
+        "ChIntegrable"
+      ],
+      [
+        "ChState"
+      ]
+    ],
+    "pychrono.core.ChStateDelta": [
+      [
+        "ChIntegrable"
+      ],
+      [
+        "Eigen::Index",
+        "ChIntegrable"
+      ],
+      [
+        "ChVectorConstRef",
+        "ChIntegrable"
+      ],
+      [
+        "ChStateDelta"
+      ]
+    ],
+    "pychrono.core.ChSurfaceNurbs": [
+      [
+        "int",
+        "int",
+        "ChMatrixDynamic<",
+        "ChVectorDynamicd",
+        "ChVectorDynamicd",
+        "ChMatrixDynamicd"
+      ],
+      [
+        "ChSurfaceNurbs"
+      ]
+    ],
+    "pychrono.core.ChSystemNSC": [
+      [
+        "std::string"
+      ],
+      [
+        "ChSystemNSC"
+      ]
+    ],
+    "pychrono.core.ChSystemSMC": [
+      [
+        "std::string"
+      ],
+      [
+        "ChSystemSMC"
+      ]
+    ],
+    "pychrono.core.ChTexture": [
+      [
+        "char"
+      ],
+      [
+        "std::string",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerExpl": [
+      [
+        "ChIntegrable"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerExplIIorder": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerImplicit": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerImplicitLinearized": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerImplicitProjected": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperEulerSemiImplicit": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperHHT": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperHeun": [
+      [
+        "ChIntegrable"
+      ]
+    ],
+    "pychrono.core.ChTimestepperLeapfrog": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperNewmark": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperRungeKuttaExpl": [
+      [
+        "ChIntegrable"
+      ]
+    ],
+    "pychrono.core.ChTimestepperTrapezoidal": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperTrapezoidalLinearized": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTimestepperTrapezoidalLinearized2": [
+      [
+        "ChIntegrableIIorder"
+      ]
+    ],
+    "pychrono.core.ChTriangle": [
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChTriangle"
+      ]
+    ],
+    "pychrono.core.ChTriangleMeshConnected": [
+      [
+        "ChTriangleMeshConnected"
+      ]
+    ],
+    "pychrono.core.ChTriangleMeshConnected_list": [
+      [
+        "ChTriangleMeshConnected_list"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChTriangleMeshConnected"
+      ]
+    ],
+    "pychrono.core.ChTriangleMeshSoup": [
+      [
+        "ChTriangleMeshSoup"
+      ]
+    ],
+    "pychrono.core.ChUniformDistribution": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChVector2d": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "ChVector2d"
+      ]
+    ],
+    "pychrono.core.ChVector2f": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "ChVector2f"
+      ]
+    ],
+    "pychrono.core.ChVector2i": [
+      [
+        "int",
+        "int"
+      ],
+      [
+        "int"
+      ],
+      [
+        "ChVector2i"
+      ]
+    ],
+    "pychrono.core.ChVector3d": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.core.ChVector3f": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "ChVector3f"
+      ]
+    ],
+    "pychrono.core.ChVector3i": [
+      [
+        "int",
+        "int",
+        "int"
+      ],
+      [
+        "int"
+      ],
+      [
+        "ChVector3i"
+      ]
+    ],
+    "pychrono.core.ChVectorDynamicI": [
+      [
+        "int"
+      ]
+    ],
+    "pychrono.core.ChVectorDynamicd": [
+      [
+        "int"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeBarrel": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeBox": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVector3d"
+      ],
+      [
+        "ChBox"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeCapsule": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCapsule"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeCone": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCone"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeCylinder": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "ChCylinder"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeEllipsoid": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVector3d"
+      ],
+      [
+        "ChEllipsoid"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeLine": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeModelFile": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.core.ChVisualShapePath": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChVisualShapePointPoint": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeRotSpring": [
+      [
+        "double",
+        "int"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeRoundedBox": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVector3d",
+        "double"
+      ],
+      [
+        "ChRoundedBox"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeRoundedCylinder": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChRoundedCylinder"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeSphere": [
+      [
+        "double"
+      ],
+      [
+        "ChSphere"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeSpring": [
+      [
+        "double",
+        "int",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeSurface": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.core.ChVisualShapeTriangleMesh": [
+      [
+        "std::shared_ptr<",
+        "bool"
+      ]
+    ],
+    "pychrono.core.ChWeibullDistribution": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.core.ChWriterCSV": [
+      [
+        "std::string",
         "\""
       ],
       [
-        "ChSystem system",
-        "std::string  filename",
-        "std::function< bool (ChBody ) > selector",
-        "bool body_info=True",
-        "std::string  delim=\"",
-        "\""
+        "ChWriterCSV"
       ]
     ],
-    "pychrono.fea.ChMeshFileLoader_ANCFShellFromGMFFile": [
+    "pychrono.core.ChZhangDistribution": [
       [
-        "fea::ChMesh  mesh",
-        "char * filename",
-        "fea::ChMaterialShellANCF  my_material",
-        "std::vector< double",
-        "std::allocator< double > >  node_ave_area",
-        "std::vector< int",
-        "std::allocator< int > >  BC_nodes",
-        "ChVector3d pos_transform=VNULL",
-        "ChMatrix33d rot_transform=ChMatrix33< double >(1)",
-        "double scaleFactor=1",
-        "bool printNodes=False",
-        "bool printElements=False"
+        "double",
+        "double"
       ]
     ],
-    "pychrono.fea.ChMeshFileLoader_BSTShellFromObjFile": [
+    "pychrono.core.CollisionShapeInstance": [
       [
-        "fea::ChMesh  mesh",
-        "char * filename",
-        "fea::ChMaterialShellKirchhoff  my_material",
-        "double my_thickness",
-        "ChVector3d pos_transform=VNULL",
-        "ChMatrix33d rot_transform=ChMatrix33< double >(1)"
+        "std::shared_ptr<",
+        "ChFramed"
+      ],
+      [
+        "CollisionShapeInstance"
       ]
     ],
-    "pychrono.fea.ChMeshFileLoader_FromAbaqusFile": [
+    "pychrono.core.ConeShape": [
       [
-        "fea::ChMesh  mesh",
-        "char * filename",
-        "fea::ChContinuumMaterial  my_material",
-        "std::map< std::string",
-        "std::vector< fea::ChNodeFEAbase",
-        "std::allocator< fea::ChNodeFEAbase  > > >  node_sets",
-        "ChVector3d pos_transform=VNULL",
-        "ChMatrix33d rot_transform=ChMatrix33< double >(1)",
-        "bool discard_unused_nodes=True"
+        "ChVector3d",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChCone",
+        "int"
       ]
     ],
-    "pychrono.fea.ChMeshFileLoader_FromTetGenFile": [
+    "pychrono.core.ConvexHullsShape": [
       [
-        "fea::ChMesh  mesh",
-        "char * filename_node",
-        "char * filename_ele",
-        "fea::ChContinuumMaterial  my_material",
-        "ChVector3d pos_transform=VNULL",
-        "ChMatrix33d rot_transform=ChMatrix33< double >(1)"
+        "std::string",
+        "int"
       ]
     ],
-    "pychrono.irrlicht.alignIrrlichtNode": [
+    "pychrono.core.CylinderShape": [
       [
-        "ISceneNode mnode",
-        "ChCoordsysd mcoords"
+        "ChVector3d",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChCylinder",
+        "int"
       ]
     ],
-    "pychrono.irrlicht.drawArrow": [
+    "pychrono.core.LineShape": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChVector3d start",
-        "ChVector3d end",
-        "ChVector3d plane_normal=VECT_Y",
-        "bool sharp=False",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "bool use_Zbuffer=False"
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<"
       ]
     ],
-    "pychrono.irrlicht.drawChFunction": [
+    "pychrono.core.SphereShape": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChFunction  fx",
-        "double xmin=0",
-        "double xmax=1",
-        "double ymin=-1",
-        "double ymax=1",
-        "int pos_x=10",
-        "int pos_y=290",
-        "int width=300",
-        "int height=100",
-        "ChColor col=ChColor(1.f",
-        "0.f",
-        "0.f)",
-        "std::string title=\"\""
+        "ChVector3d",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChSphere",
+        "int"
       ]
     ],
-    "pychrono.irrlicht.drawCircle": [
+    "pychrono.core.SpringShape": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "double radius",
-        "ChCoordsysd pos=CSYSNORM",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "int resolution=36",
-        "bool use_Zbuffer=False"
+        "double",
+        "int",
+        "double"
       ]
     ],
-    "pychrono.irrlicht.drawColorbar": [
+    "pychrono.core.TrimeshShape": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChColormap colormap",
-        "double value_min",
-        "double value_max",
-        "std::string  label",
-        "int pos_x=740",
-        "int pos_y=20",
-        "int width=30",
-        "int height=300"
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::string",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::string",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
       ]
     ],
-    "pychrono.irrlicht.drawCoordsys": [
+    "pychrono.core.material_list": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChCoordsysd coord=CSYSNORM",
-        "double scale=1",
-        "bool use_Zbuffer=False"
+        "material_list"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawGrid": [
+    "pychrono.core.vector_ChBody": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "double ustep=0.1",
-        "double vstep=0.1",
-        "int nu=20",
-        "int nv=20",
-        "ChCoordsysd pos=CSYSNORM",
-        "ChColor col=ChColor(0.7f",
-        "0.7f",
-        "0.7f)",
-        "bool use_Zbuffer=False"
+        "vector_ChBody"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawHUDviolation": [
+    "pychrono.core.vector_ChCoordsysd": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "int pos_x=10",
-        "int pos_y=290",
-        "int width=300",
-        "int height=100"
+        "vector_ChCoordsysd"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChCoordsysd"
       ]
     ],
-    "pychrono.irrlicht.drawLabel3D": [
+    "pychrono.core.vector_ChLink": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "std::string  text",
-        "ChVector3d position",
-        "ChColor color=ChColor(0.f",
-        "0.f",
-        "0.f)",
-        "bool use_Zbuffer=False"
+        "vector_ChLink"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawPlot3D": [
+    "pychrono.core.vector_ChLinkBase": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChMatrixConstRef X",
-        "ChMatrixConstRef Y",
-        "ChMatrixConstRef Z",
-        "ChCoordsysd pos=CSYSNORM",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "bool use_Zbuffer=False"
+        "vector_ChLinkBase"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawPolyline": [
+    "pychrono.core.vector_ChLoadable": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "vector_ChVector3d points",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "bool use_Zbuffer=False"
+        "vector_ChLoadable"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawProfiler": [
+    "pychrono.core.vector_ChMesh": [
       [
-        "ChVisualSystemIrrlicht vis"
+        "vector_ChMesh"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawRotSpring": [
+    "pychrono.core.vector_ChPhysicsItem": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChCoordsysd pos",
-        "double radius",
-        "double start_angle",
-        "double end_angle",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "int resolution=65",
-        "bool use_Zbuffer=False"
+        "vector_ChPhysicsItem"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ],
-    "pychrono.irrlicht.drawSegment": [
+    "pychrono.core.vector_ChQuaterniond": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "ChVector3d start",
-        "ChVector3d end",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "bool use_Zbuffer=False"
+        "vector_ChQuaterniond"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChQuaterniond"
       ]
     ],
-    "pychrono.irrlicht.drawSpring": [
+    "pychrono.core.vector_ChQuaternionf": [
       [
-        "ChVisualSystemIrrlicht vis",
-        "double radius",
-        "ChVector3d start",
-        "ChVector3d end",
-        "ChColor col=ChColor(1.f",
-        "1.f",
-        "1.f)",
-        "int resolution=65",
-        "double turns=5",
-        "bool use_Zbuffer=False"
+        "vector_ChQuaternionf"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChQuaternionf"
       ]
     ],
-    "pychrono.irrlicht.unpack_textureBlendFunc": [
+    "pychrono.core.vector_ChVector2d": [
       [
-        "irr::video::E_BLEND_FACTOR  srcFact",
-        "irr::video::E_BLEND_FACTOR  dstFact",
-        "irr::video::E_MODULATE_FUNC  modulo",
-        "irr::u32  alphaSource",
-        "irr::f32 param"
+        "vector_ChVector2d"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector2d"
       ]
     ],
-    "pychrono.vehicle.ChChassis_RemoveJoint": [
+    "pychrono.core.vector_ChVector2f": [
       [
-        "ChJoint  joint"
+        "vector_ChVector2f"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector2f"
       ]
     ],
-    "pychrono.vehicle.ChWorldFrame_Project": [
+    "pychrono.core.vector_ChVector2i": [
       [
-        "ChVector3d v"
+        "vector_ChVector2i"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector2i"
       ]
     ],
-    "pychrono.vehicle.ChWorldFrame_Set": [
+    "pychrono.core.vector_ChVector3d": [
       [
-        "ChMatrix33d rot"
+        "vector_ChVector3d"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector3d"
       ]
     ],
-    "pychrono.vehicle.ChWorldFrame_SetYUP": [
-      []
-    ],
-    "pychrono.vehicle.ReadFileJSON": [
+    "pychrono.core.vector_ChVector3f": [
       [
-        "std::string  filename",
-        "rapidjson::Document  d"
+        "vector_ChVector3f"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector3f"
       ]
     ],
-    "pychrono.vehicle.SetDataPath": [
+    "pychrono.core.vector_ChVector3i": [
       [
-        "std::string  path"
+        "vector_ChVector3i"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "ChVector3i"
       ]
     ],
-    "pychrono.vehicle.delete_doublep": [
+    "pychrono.core.vector_CollisionShapeInstance": [
       [
-        "double * obj"
+        "vector_CollisionShapeInstance"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "CollisionShapeInstance"
       ]
     ],
-    "pychrono.vehicle.delete_intp": [
+    "pychrono.core.vector_vector_ChVector2d": [
       [
-        "int * obj"
+        "vector_vector_ChVector2d"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "vector_ChVector2d"
       ]
     ],
-    "pychrono.vehicle.doublep_assign": [
+    "pychrono.core.vector_vector_ChVector3d": [
       [
-        "double * obj",
-        "double value"
+        "vector_vector_ChVector3d"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "vector_ChVector3d"
       ]
     ],
-    "pychrono.vehicle.intp_assign": [
+    "pychrono.fea.ChBeamSectionCosserat": [
       [
-        "int * obj",
-        "int value"
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionCosseratEasyCircular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionCosseratEasyRectangular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionEulerAdvancedGeneric": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionEulerEasyCircular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionEulerEasyRectangular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionRayleighAdvancedGeneric": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionRayleighEasyCircular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionRayleighEasyRectangular": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionShapeCircular": [
+      [
+        "double",
+        "int"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionShapePolyline": [
+      [
+        "vector_vector_ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChBeamSectionShapeRectangular": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChContactNodeXYZ": [
+      [
+        "ChNodeFEAxyz",
+        "ChContactSurface"
+      ]
+    ],
+    "pychrono.fea.ChContactNodeXYZRot": [
+      [
+        "ChNodeFEAxyzrot",
+        "ChContactSurface"
+      ]
+    ],
+    "pychrono.fea.ChContactSurfaceMesh": [
+      [
+        "std::shared_ptr<",
+        "ChMesh"
+      ]
+    ],
+    "pychrono.fea.ChContactSurfaceNodeCloud": [
+      [
+        "std::shared_ptr<",
+        "ChMesh"
+      ]
+    ],
+    "pychrono.fea.ChContactTriangleXYZ": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChContactSurface"
+      ],
+      [
+        "std::array<",
+        "ChContactSurface"
+      ]
+    ],
+    "pychrono.fea.ChContactTriangleXYZRot": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChContactSurface"
+      ],
+      [
+        "std::array<",
+        "ChContactSurface"
+      ]
+    ],
+    "pychrono.fea.ChContinuumDruckerPrager": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChContinuumDruckerPrager"
+      ]
+    ],
+    "pychrono.fea.ChContinuumElastic": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChContinuumElastic"
+      ]
+    ],
+    "pychrono.fea.ChContinuumElastoplastic": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChContinuumElastic"
+      ]
+    ],
+    "pychrono.fea.ChContinuumElectrostatics": [
+      [
+        "ChContinuumElectrostatics"
+      ]
+    ],
+    "pychrono.fea.ChContinuumMaterial": [
+      [
+        "double"
+      ],
+      [
+        "ChContinuumMaterial"
+      ]
+    ],
+    "pychrono.fea.ChContinuumPlasticVonMises": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChContinuumPlasticVonMises"
+      ]
+    ],
+    "pychrono.fea.ChContinuumPoisson3D": [
+      [
+        "ChContinuumPoisson3D"
+      ]
+    ],
+    "pychrono.fea.ChContinuumThermal": [
+      [
+        "ChContinuumThermal"
+      ]
+    ],
+    "pychrono.fea.ChDampingCosseratRayleigh": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChDampingKirchhoffRayleigh": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChDampingReissnerRayleigh": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityCosseratAdvanced": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityCosseratAdvancedGeneric": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityCosseratAdvancedGenericFPM": [
+      [
+        "ChMatrix66d",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityCosseratSimple": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityKirchhoffIsothropic": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityKirchhoffOrthotropic": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityReissnerIsothropic": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChElasticityReissnerOrthotropic": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChExtruderBeamEuler": [
+      [
+        "ChSystem",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "ChCoordsysd",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChExtruderBeamIGA": [
+      [
+        "ChSystem",
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "double",
+        "ChCoordsysd",
+        "double",
+        "int"
+      ]
+    ],
+    "pychrono.fea.ChInertiaCosseratAdvanced": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChInertiaCosseratMassref": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChInertiaCosseratSimple": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChLinkNodeFrame": [
+      [
+        "ChLinkNodeFrame"
+      ]
+    ],
+    "pychrono.fea.ChLinkNodeFrameGeneric": [
+      [
+        "bool",
+        "bool",
+        "bool"
+      ],
+      [
+        "ChLinkNodeFrameGeneric"
+      ]
+    ],
+    "pychrono.fea.ChLinkNodeNode": [
+      [
+        "ChLinkNodeNode"
+      ]
+    ],
+    "pychrono.fea.ChLinkNodeSlopeFrame": [
+      [
+        "ChLinkNodeSlopeFrame"
+      ]
+    ],
+    "pychrono.fea.ChLoadBeamWrench": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoadBeamWrenchDistributed": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRot": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotBody": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotBodyBushingGeneric": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChMatrixConstRef",
+        "ChMatrixConstRef"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChMatrixDynamicd",
+        "ChMatrixDynamicd"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotBodyBushingMate": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotBodyBushingPlastic": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotBodyBushingSpherical": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotForceAbs": [
+      [
+        "std::shared_ptr<",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotNodeXYZRot": [
+      [
+        "vector_ChLoadable"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotNodeXYZRotBushingGeneric": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChMatrixConstRef",
+        "ChMatrixConstRef"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChMatrixDynamicd",
+        "ChMatrixDynamicd"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotNodeXYZRotBushingMate": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotNodeXYZRotBushingPlastic": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoadNodeXYZRotNodeXYZRotBushingSpherical": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "ChFrame<",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChLoaderBeamWrench": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChLoaderBeamWrenchDistributed": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChMaterialBeamANCF": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChMaterialShellANCF": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.fea.ChMaterialShellKirchhoff": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChMaterialShellReissner": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ],
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.fea.ChMaterialShellReissnerIsothropic": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChMaterialShellReissnerOrthotropic": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.ChMesh": [
+      [
+        "ChMesh"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyz": [
+      [
+        "ChVector3d"
+      ],
+      [
+        "ChNodeFEAxyz"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyzD": [
+      [
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChNodeFEAxyzD"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyzDD": [
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChNodeFEAxyzDD"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyzDDD": [
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChNodeFEAxyzDDD"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyzP": [
+      [
+        "ChVector3d"
+      ],
+      [
+        "ChNodeFEAxyzP"
+      ]
+    ],
+    "pychrono.fea.ChNodeFEAxyzrot": [
+      [
+        "ChFrame<"
+      ],
+      [
+        "ChNodeFEAxyzrot"
+      ]
+    ],
+    "pychrono.fea.ChSectionMaterial": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementBase": [
+      [
+        "vector_ChElementBase"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementBeamANCF_3243": [
+      [
+        "vector_ChElementBeamANCF_3243"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementBeamANCF_3333": [
+      [
+        "vector_ChElementBeamANCF_3333"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementBeamEuler": [
+      [
+        "vector_ChElementBeamEuler"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementBeamIGA": [
+      [
+        "vector_ChElementBeamIGA"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChElementCableANCF": [
+      [
+        "vector_ChElementCableANCF"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAbase": [
+      [
+        "vector_ChNodeFEAbase"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAcurv": [
+      [
+        "vector_ChNodeFEAcurv"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAxyz": [
+      [
+        "vector_ChNodeFEAxyz"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAxyzD": [
+      [
+        "vector_ChNodeFEAxyzD"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAxyzDD": [
+      [
+        "vector_ChNodeFEAxyzDD"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAxyzDDD": [
+      [
+        "vector_ChNodeFEAxyzDDD"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.fea.vector_ChNodeFEAxyzrot": [
+      [
+        "vector_ChNodeFEAxyzrot"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.irrlicht.CShaderPreprocessor": [
+      [
+        "IVideoDriver"
+      ]
+    ],
+    "pychrono.irrlicht.ChIrrNodeModel": [
+      [
+        "std::weak_ptr<",
+        "ISceneNode",
+        "ISceneManager",
+        "irr::s32"
+      ]
+    ],
+    "pychrono.irrlicht.ChIrrNodeShape": [
+      [
+        "std::shared_ptr<",
+        "ISceneNode"
+      ]
+    ],
+    "pychrono.irrlicht.ChVisualSystemIrrlicht": [
+      [
+        "ChSystem",
+        "ChVector3d",
+        "2",
+        "2)",
+        "ChVector3d",
+        "0",
+        "0)"
+      ]
+    ],
+    "pychrono.irrlicht.DepthShaderCB": [
+      [
+        "EffectHandler"
+      ]
+    ],
+    "pychrono.irrlicht.EffectHandler": [
+      [
+        "IrrlichtDevice",
+        "dimension2du",
+        "0)",
+        "bool",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.irrlicht.IRenderTarget": [
+      [
+        "irr::video::ITexture",
+        "irr::video::E_COLOR_PLANE",
+        "irr::video::E_BLEND_FACTOR",
+        "irr::video::E_BLEND_FACTOR",
+        "irr::video::E_BLEND_OPERATION"
+      ],
+      [
+        "irr::video::E_RENDER_TARGET",
+        "irr::video::E_COLOR_PLANE",
+        "irr::video::E_BLEND_FACTOR",
+        "irr::video::E_BLEND_FACTOR",
+        "irr::video::E_BLEND_OPERATION"
+      ]
+    ],
+    "pychrono.irrlicht.SColor": [
+      [
+        "irr::u32",
+        "irr::u32",
+        "irr::u32",
+        "irr::u32"
+      ],
+      [
+        "irr::u32"
+      ]
+    ],
+    "pychrono.irrlicht.SColorHSL": [
+      [
+        "irr::f32",
+        "irr::f32",
+        "irr::f32"
+      ]
+    ],
+    "pychrono.irrlicht.SColorf": [
+      [
+        "irr::f32",
+        "irr::f32",
+        "irr::f32",
+        "irr::f32"
+      ],
+      [
+        "SColor"
+      ]
+    ],
+    "pychrono.irrlicht.SMaterial": [
+      [
+        "SMaterial"
+      ]
+    ],
+    "pychrono.irrlicht.SMaterialLayer": [
+      [
+        "SMaterialLayer"
+      ]
+    ],
+    "pychrono.irrlicht.SShadowLight": [
+      [
+        "irr::u32",
+        "vector3df",
+        "vector3df",
+        "SColorf",
+        "irr::f32",
+        "irr::f32",
+        "irr::f32",
+        "bool"
+      ]
+    ],
+    "pychrono.irrlicht.SUniformDescriptor": [
+      [
+        "irr::f32",
+        "irr::u32"
+      ]
+    ],
+    "pychrono.irrlicht.ShadowShaderCB": [
+      [
+        "EffectHandler"
+      ]
+    ],
+    "pychrono.irrlicht.dimension2du": [
+      [
+        "int",
+        "int"
+      ],
+      [
+        "irr::core::vector2d<"
+      ]
+    ],
+    "pychrono.irrlicht.matrix4CH": [
+      [
+        "ChCoordsysd"
+      ],
+      [
+        "ChFramed"
+      ]
+    ],
+    "pychrono.irrlicht.rectf": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "position2d<",
+        "position2d<"
+      ]
+    ],
+    "pychrono.irrlicht.recti": [
+      [
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      [
+        "position2d<",
+        "position2d<"
+      ]
+    ],
+    "pychrono.irrlicht.vector2df": [
+      [
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "vector2df"
+      ],
+      [
+        "dimension2d<"
+      ]
+    ],
+    "pychrono.irrlicht.vector2di": [
+      [
+        "int",
+        "int"
+      ],
+      [
+        "int"
+      ],
+      [
+        "vector2di"
+      ],
+      [
+        "dimension2d<"
+      ]
+    ],
+    "pychrono.irrlicht.vector3df": [
+      [
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "double"
+      ],
+      [
+        "vector3df"
+      ]
+    ],
+    "pychrono.irrlicht.vector3dfCH": [
+      [
+        "ChVector3d"
+      ]
+    ],
+    "pychrono.irrlicht.vector3di": [
+      [
+        "int",
+        "int",
+        "int"
+      ],
+      [
+        "int"
+      ],
+      [
+        "vector3di"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_DoubleWishboneFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_DoubleWishboneRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_Driveline4WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_PitmanArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_Vehicle": [
+      [
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_WheelLeft": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ARTcar_WheelRight": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.AutomaticTransmissionShafts": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_DoubleWishbone": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_Driveline": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_FrontWheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_MacPhersonStrut": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_RearWheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_Steering": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_TMsimpleTireFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_TMsimpleTireRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.BMW_E90_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Balancer": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.BoxShape": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChVector3d",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChBox",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.BrakeShafts": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.BrakeSimple": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ChAABB": [
+      [
+        "ChVector3d",
+        "ChVector3d"
+      ],
+      [
+        "ChIntAABB",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChAdaptiveSpeedController": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChAxleList": [
+      [
+        "ChAxleList"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.vehicle.ChBezierCurve": [
+      [
+        "vector_ChVector3d",
+        "vector_ChVector3d",
+        "vector_ChVector3d",
+        "bool"
+      ],
+      [
+        "vector_ChVector3d",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.ChBezierCurveTracker": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.vehicle.ChChaseCamera": [
+      [
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.vehicle.ChChassisConnectorHitch": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChClosedLoopDriver": [
+      [
+        "ChVehicle"
+      ]
+    ],
+    "pychrono.vehicle.ChDataDriver": [
+      [
+        "ChVehicle",
+        "std::string",
+        "bool"
+      ],
+      [
+        "ChVehicle",
+        "vector_Entry",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.ChDriver": [
+      [
+        "ChVehicle"
+      ]
+    ],
+    "pychrono.vehicle.ChIntAABB": [
+      [
+        "ChVector3i",
+        "ChVector3i"
+      ]
+    ],
+    "pychrono.vehicle.ChInteractiveDriver": [
+      [
+        "ChVehicle"
+      ]
+    ],
+    "pychrono.vehicle.ChPatchList": [
+      [
+        "ChPatchList"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerACCDriver": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerDriver": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerDriverPP": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerDriverSR": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerDriverStanley": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathFollowerDriverXT": [
+      [
+        "ChVehicle",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      [
+        "ChVehicle",
+        "std::string",
+        "std::string",
+        "std::shared_ptr<",
+        "std::string",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathSteeringController": [
+      [
+        "std::shared_ptr<"
+      ],
+      [
+        "std::string",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.vehicle.ChPathSteeringControllerPP": [
+      [
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ],
+      [
+        "std::string",
+        "std::shared_ptr<",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathSteeringControllerSR": [
+      [
+        "std::shared_ptr<",
+        "bool",
+        "double",
+        "double"
+      ],
+      [
+        "std::string",
+        "std::shared_ptr<",
+        "bool",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathSteeringControllerStanley": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::string",
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPathSteeringControllerXT": [
+      [
+        "std::shared_ptr<",
+        "double"
+      ],
+      [
+        "std::string",
+        "std::shared_ptr<",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ChPowertrainAssembly": [
+      [
+        "std::shared_ptr<",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.vehicle.ChSTRKeyboardHandlerIRR": [
+      [
+        "ChSuspensionTestRigVisualSystemIRR"
+      ]
+    ],
+    "pychrono.vehicle.ChSpeedController": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChSuspensionTestRigDataDriver": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChSuspensionTestRigPlatform": [
+      [
+        "std::shared_ptr<",
+        "vector_int",
+        "double"
+      ],
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChSuspensionTestRigPushrod": [
+      [
+        "std::shared_ptr<",
+        "vector_int",
+        "double"
+      ],
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ChWheelList": [
+      [
+        "ChWheelList"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.vehicle.ChassisConnectorArticulated": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ChassisConnectorHitch": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ChassisConnectorTorsion": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.CityBus": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_Driveline2WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_LeafspringAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_RackPinion": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_RotaryArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_TMeasyTire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_ToeBarLeafspringAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.CityBus_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.ConeShape": [
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChCone",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.ConvexHullsShape": [
+      [
+        "std::string",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.CylinderShape": [
+      [
+        "ChVector3d",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "ChCylinder",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.DoubleTrackWheel": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.DoubleWishbone": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.DoubleWishboneReduced": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.EngineShafts": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.EngineSimple": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.EngineSimpleMap": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.Entry": [
+      [
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ExternalForceTorque": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_DoubleWishboneFront": [
+      [
+        "std::string",
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_DoubleWishboneRear": [
+      [
+        "std::string",
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_Driveline4WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_Pac02Tire": [
+      [
+        "std::string",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_PitmanArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType",
+        "int",
+        "int"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType",
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.FEDA_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.FialaTire": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.FlatTerrain": [
+      [
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ForceRSDA": [
+      [
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.ForceTSDA": [
+      [
+        "std::string",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.Gator": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.Gator_AutomaticTransmissionSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Gator_Driveline2WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_EngineSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_RackPinion": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_RigidSuspension": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_RigidTire_Front": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.Gator_RigidTire_Rear": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.Gator_SimpleDriveline": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_SingleWishbone": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_TMeasyTire_Front": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_TMeasyTire_Rear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Gator_Vehicle": [
+      [
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Gator_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_AutomaticTransmissionShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_DoubleWishboneFront": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_DoubleWishboneRear": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_DoubleWishboneReducedFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_DoubleWishboneReducedRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Driveline2WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Driveline4WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_EngineShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_EngineSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_FialaTire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Full": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Pac02Tire": [
+      [
+        "std::string",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Pac89Tire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_PitmanArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_RackPinion": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Reduced": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_SimpleDriveline": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_TMeasyTire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_VehicleFull": [
+      [
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "bool",
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "bool",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_VehicleReduced": [
+      [
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::DrivelineTypeWV",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.HMMWV_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.HendricksonPRIMAXX": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.Kraz": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.Kraz_tractor": [
+      [
+        "bool",
+        "vehicle::CollisionType",
+        "ChContactMethod"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Kraz_trailer": [
+      [
+        "ChSystem",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.LeafspringAxle": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.LineShape": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<"
+      ]
+    ],
+    "pychrono.vehicle.M113": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.M113_AutomaticTransmissionShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_AutomaticTransmissionSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.M113_EngineShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_EngineSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_Idler": [
+      [
+        "std::string",
+        "vehicle::VehicleSide"
+      ]
+    ],
+    "pychrono.vehicle.M113_RoadWheelLeft": [
+      [
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.M113_RoadWheelRight": [
+      [
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.M113_Suspension": [
+      [
+        "std::string",
+        "vehicle::VehicleSide",
+        "int",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackAssemblyBandANCF": [
+      [
+        "vehicle::VehicleSide",
+        "vehicle::BrakeType",
+        "vehicle::ChTrackShoeBandANCF::ElementType",
+        "bool",
+        "int",
+        "int",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackAssemblyBandBushing": [
+      [
+        "vehicle::VehicleSide",
+        "vehicle::BrakeType",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackAssemblyDoublePin": [
+      [
+        "vehicle::VehicleSide",
+        "vehicle::DoublePinTrackShoeType",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackAssemblySinglePin": [
+      [
+        "vehicle::VehicleSide",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackShoeBandANCF": [
+      [
+        "std::string",
+        "vehicle::ChTrackShoeBandANCF::ElementType",
+        "bool",
+        "int",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackShoeBandBushing": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackShoeDoublePin": [
+      [
+        "std::string",
+        "vehicle::DoublePinTrackShoeType"
+      ]
+    ],
+    "pychrono.vehicle.M113_TrackShoeSinglePin": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.M113_Vehicle_BandANCF": [
+      [
+        "bool",
+        "vehicle::ChTrackShoeBandANCF::ElementType",
+        "bool",
+        "int",
+        "int",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "bool",
+        "vehicle::ChTrackShoeBandANCF::ElementType",
+        "bool",
+        "int",
+        "int",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "ChSystem",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.M113_Vehicle_BandBushing": [
+      [
+        "bool",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "bool",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "ChSystem",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.M113_Vehicle_DoublePin": [
+      [
+        "bool",
+        "vehicle::DoublePinTrackShoeType",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "bool",
+        "vehicle::DoublePinTrackShoeType",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool",
+        "ChSystem",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.M113_Vehicle_SinglePin": [
+      [
+        "bool",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "bool",
+        "vehicle::DrivelineTypeTV",
+        "vehicle::BrakeType",
+        "bool",
+        "bool",
+        "bool",
+        "ChSystem",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t_Front1Axle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t_Front2Axle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t_RotaryArm2": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_10t_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType",
+        "bool"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_AutomaticTransmissionSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_BellcrankSolid3LinkAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_EngineSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_RotaryArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_SimpleDriveline": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_SimpleDrivelineXWD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_Solid3LinkAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_TMeasyTire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.MAN_5t_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_AutomaticTransmissionSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_EngineSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MAN_7t_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType",
+        "bool"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.MTV_Balancer": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.MacPhersonStrut": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ManualTransmissionShafts": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.MultiLink": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.Pac02Tire": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.Pac89Tire": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.PitmanArm": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.RackPinion": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.RigidChassis": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.RigidTerrain": [
+      [
+        "ChSystem"
+      ],
+      [
+        "ChSystem",
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.RigidTire": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.RotaryArm": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.RotationalDamperSuspension": [
+      [
+        "std::string",
+        "bool",
+        "bool"
+      ],
+      [
+        "rapidjson::Document",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.SCMContactableData": [
+      [
+        "double",
+        "double",
+        "double",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.SCMLoader": [
+      [
+        "ChSystem",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.SCMTerrain": [
+      [
+        "ChSystem",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.Sedan": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_BrakeShafts": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_BrakeSimple": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_DoubleWishbone": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_Driveline2WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_MultiLink": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_TMeasyTire": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.Sedan_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.SemiTrailingArm": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ShaftsDriveline2WD": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ShaftsDriveline4WD": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SimpleDriveline": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SimpleDrivelineXWD": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SimpleTrackDriveline": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SingleTrackWheel": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SingleWishbone": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SolidAxle": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SolidBellcrankThreeLinkAxle": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SolidThreeLinkAxle": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SphereShape": [
+      [
+        "ChVector3d",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChSphere",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.SpringShape": [
+      [
+        "double",
+        "int",
+        "double"
+      ]
+    ],
+    "pychrono.vehicle.SprocketBand": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SprocketDoublePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.SprocketSinglePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TMeasyTire": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TerrainForces": [
+      [
+        "TerrainForces"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "TerrainForce"
+      ]
+    ],
+    "pychrono.vehicle.ThreeLinkIRS": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.ToeBarLeafspringAxle": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackAssemblyBandANCF": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackAssemblyBandBushing": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackAssemblyDoublePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackAssemblySinglePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackBrakeShafts": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackBrakeSimple": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackDrivelineBDS": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackShoeBandANCF": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackShoeBandBushing": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackShoeDoublePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackShoeSinglePin": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrackedVehicle": [
+      [
+        "std::string",
+        "ChContactMethod"
+      ],
+      [
+        "ChSystem",
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.TranslationalDamperSuspension": [
+      [
+        "std::string",
+        "bool",
+        "bool"
+      ],
+      [
+        "rapidjson::Document",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.TranslationalIdler": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.TrimeshShape": [
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::string",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::string",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ],
+      [
+        "ChVector3d",
+        "ChQuaterniond",
+        "std::shared_ptr<",
+        "ChVector3d",
+        "double",
+        "double",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS": [
+      [
+        "ChSystem"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_AutomaticTransmissionSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_BrakeShaftsFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_BrakeShaftsRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_BrakeSimpleFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_BrakeSimpleRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Chassis": [
+      [
+        "std::string",
+        "bool",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Driveline2WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Driveline4WD": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_EngineSimpleMap": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_LeafspringAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Pac02Tire": [
+      [
+        "std::string",
+        "int"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_RigidTire": [
+      [
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_RotaryArm": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_TMeasyTireFront": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_TMeasyTireRear": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_ToeBarLeafspringAxle": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Vehicle": [
+      [
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "ChContactMethod",
+        "vehicle::CollisionType"
+      ],
+      [
+        "ChSystem",
+        "bool",
+        "vehicle::BrakeType",
+        "vehicle::SteeringTypeWV",
+        "vehicle::CollisionType"
+      ]
+    ],
+    "pychrono.vehicle.UAZBUS_Wheel": [
+      [
+        "std::string"
+      ]
+    ],
+    "pychrono.vehicle.Wheel": [
+      [
+        "std::string"
+      ],
+      [
+        "rapidjson::Document"
+      ]
+    ],
+    "pychrono.vehicle.WheelStates": [
+      [
+        "WheelStates"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "WheelState"
+      ]
+    ],
+    "pychrono.vehicle.WheeledTrailer": [
+      [
+        "ChSystem",
+        "std::string",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.WheeledVehicle": [
+      [
+        "std::string",
+        "ChContactMethod",
+        "bool",
+        "bool"
+      ],
+      [
+        "ChSystem",
+        "std::string",
+        "bool",
+        "bool"
+      ]
+    ],
+    "pychrono.vehicle.dimension2du": [
+      [
+        "int",
+        "int"
+      ],
+      [
+        "irr::core::vector2d<"
+      ]
+    ],
+    "pychrono.vehicle.vector_Entry": [
+      [
+        "vector_Entry"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "Entry"
+      ]
+    ],
+    "pychrono.vehicle.vector_double": [
+      [
+        "vector_double"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
+      ]
+    ],
+    "pychrono.vehicle.vector_int": [
+      [
+        "vector_int"
+      ],
+      [
+        "std::vector<"
+      ],
+      [
+        "std::vector<",
+        "std::vector<"
       ]
     ]
   }
