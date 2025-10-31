@@ -3,98 +3,112 @@
 Build a symbol allow-list from your installed PyChrono 9.0.1, including
 constructor overload signatures parsed from pybind11 docstrings.
 
-Usage (recommended):
-  python chrono_allowlist_dump.py --out allowlist.json \
+Usage (one line):
+  python -u chrono_allowlist_dump.py --out allowlist.json \
     --modules pychrono pychrono.irrlicht pychrono.vehicle pychrono.fea
+
+Tips:
+  - Use -u or PYTHONUNBUFFERED=1 so heartbeat prints show up immediately.
+  - Adjust --hb-every and --hb-secs to change heartbeat frequency.
 """
-import argparse, importlib, json, re, sys, inspect
+
+import argparse, importlib, json, re, sys, time
 
 PROTO_RE = re.compile(r"""
-    ^\s*                                    # leading
-    (?P<name>[A-Za-z_]\w*)                  # function/ctor name
-    \s*\((?P<args>.*)\)\s*$                 # (arg list)
+    ^\s*
+    (?P<name>[A-Za-z_]\w*)
+    \s*\((?P<args>.*)\)\s*$
 """, re.VERBOSE)
 
-# Normalize C++/pybind-ish tokens to gate-types
 def norm_tok(tok: str) -> str:
     t = tok.strip()
-    # strip namespaces / shared_ptrs
     t = re.sub(r"std::shared_ptr\s*<\s*([^>]+)\s*>", r"\1", t)
-    t = t.replace("chrono::", "")
-    t = t.replace("const ", "").replace("&", "").strip()
-    # common maps
+    t = t.replace("chrono::", "").replace("const ", "").replace("&", "").strip()
     if t in {"double", "float"}: return "double"
     if t in {"int", "size_t", "unsigned", "unsigned int"}: return "int"
-    if t in {"bool"}: return "bool"
+    if t == "bool": return "bool"
     if t.startswith("ChContactMaterial"): return "ChContactMaterial"
     if t.startswith("ChAxis"): return "ChAxis"
-    # Fall back to raw (e.g., class type)
     return t
 
 def parse_overloads_from_doc(name: str, doc: str) -> list[list[str]]:
-    """
-    Look for lines like:
-      ChBodyEasyCylinder(ChAxis,double,double,double,bool,bool, std::shared_ptr< chrono::ChContactMaterial >)
-    Return list of arg-type lists.
-    """
     overloads = []
     if not doc:
         return overloads
     for line in doc.splitlines():
         m = PROTO_RE.match(line.strip())
-        if not m:
-            continue
-        if m.group("name") != name:
+        if not m or m.group("name") != name:
             continue
         args = m.group("args").strip()
-        if args == "":
+        if not args:
             overloads.append([])
             continue
-        # split by commas at top-level (docs are simple here)
         parts = [p.strip() for p in args.split(",")]
         overloads.append([norm_tok(p) for p in parts])
     return overloads
 
-def dump(modules):
-    data = {}
-    overloads = {}   # fully-qualified like "pychrono.ChBodyEasyCylinder" -> [[types...], ...]
-    enums = set()    # e.g., "ChAxis"
+def dump(modules, hb_every: int, hb_secs: float, verbose: bool):
+    start = time.monotonic()
+    last_hb = start
+    data_modules: dict[str, list[str]] = {}
+    overloads: dict[str, list[list[str]]] = {}
+    enums = set()
+    total_syms = 0
+
+    def heartbeat(phase: str, mname: str, idx: int | None = None, count: int | None = None):
+        nonlocal last_hb
+        now = time.monotonic()
+        if (idx is not None and hb_every and idx % hb_every == 0) or (hb_secs and now - last_hb >= hb_secs):
+            msg = f"[HB] {phase} module={mname}"
+            if idx is not None and count is not None:
+                msg += f" progress={idx}/{count}"
+            msg += f" elapsed={now - start:.1f}s"
+            print(msg, flush=True)
+            last_hb = now
 
     for mname in modules:
+        print(f"[INFO] Importing {mname} ...", flush=True)
         try:
             m = importlib.import_module(mname)
         except Exception as e:
-            print(f"[WARN] Cannot import {mname}: {e}", file=sys.stderr)
-            data[mname] = []
+            print(f"[WARN] Cannot import {mname}: {e}", file=sys.stderr, flush=True)
+            data_modules[mname] = []
             continue
 
         symbols = sorted(dir(m))
-        data[mname] = symbols
+        data_modules[mname] = symbols
+        count = len(symbols)
+        total_syms += count
+        print(f"[INFO] {mname}: {count} symbols", flush=True)
 
-        for sym in symbols:
-            fq = f"{mname}.{sym}"
-            obj = getattr(m, sym, None)
-            if obj is None:
+        for i, sym in enumerate(symbols, 1):
+            if verbose and i <= 5:
+                print(f"[DBG]   scanning {mname}.{sym}", flush=True)
+            heartbeat("scanning", mname, i, count)
+
+            try:
+                obj = getattr(m, sym)
+            except Exception:
                 continue
 
-            # Try to capture overloads from doc
-            doc = getattr(obj, "__doc__", "") or ""
-            tsig = getattr(obj, "__text_signature__", None)
-            if tsig and isinstance(tsig, str):
-                # e.g. (self, axis: ChAxis, r: float, h: float, density: float)
-                # Not always present; keep doc parsing primary.
-                pass
-
+            # overloads
+            try:
+                doc = getattr(obj, "__doc__", "") or ""
+            except Exception:
+                doc = ""
             ols = parse_overloads_from_doc(sym, doc)
             if ols:
-                overloads[fq] = ols
+                overloads[f"{mname}.{sym}"] = ols
 
-            # Record enum families by name hints (best-effort)
-            # If module exposes enum attrs like ChAxis_X, treat base "ChAxis" as enum type
+            # enum hint
             if re.match(r"ChAxis_[A-Z]$", sym):
                 enums.add("ChAxis")
 
-    return {"modules": data, "overloads": overloads, "enums": sorted(enums)}
+    elapsed = time.monotonic() - start
+    print(f"[DONE] modules={len(modules)} total_symbols={total_syms} "
+          f"overloads={len(overloads)} elapsed={elapsed:.1f}s", flush=True)
+
+    return {"modules": data_modules, "overloads": overloads, "enums": sorted(enums)}
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
@@ -102,9 +116,12 @@ if __name__ == "__main__":
     ap.add_argument("--modules", nargs="+", default=[
         "pychrono", "pychrono.irrlicht", "pychrono.vehicle", "pychrono.fea"
     ])
+    ap.add_argument("--hb-every", type=int, default=200, help="print heartbeat every N symbols")
+    ap.add_argument("--hb-secs", type=float, default=5.0, help="print heartbeat at least every N seconds")
+    ap.add_argument("--verbose", action="store_true", help="print a few debug lines per module")
     args = ap.parse_args()
 
-    payload = dump(args.modules)
+    payload = dump(args.modules, hb_every=args.hb_every, hb_secs=args.hb_secs, verbose=args.verbose)
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, sort_keys=True)
-    print(f"[WROTE] {args.out}  (modules + overloads + enums)")
+    print(f"[WROTE] {args.out} (modules + overloads + enums)", flush=True)
