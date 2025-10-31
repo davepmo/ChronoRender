@@ -1,53 +1,37 @@
-from fastapi import FastAPI
+# app.py
+# FastAPI service for Render.com that lints and executes code.
+# /lint returns validation only. /execute ALWAYS runs validator first.
+
+import os, traceback
+from fastapi import FastAPI, HTTPException, Header
 from pydantic import BaseModel
-from chrono_ast_gate_v2 import load_allowlist, validate as v
-import os, json
+from typing import Optional
+from chrono_validator_v3 import validate_python
 
-ALLOWLIST_PATH = os.getenv("ALLOWLIST_PATH", "allowlist.json")
-API_KEY = os.getenv("API_KEY", "")
+AUTH_KEY = os.environ.get("AUTH_KEY", "")
+app = FastAPI(title="Chrono v9 Validator+Runner")
 
-_allow = None
-def get_allow():
-    global _allow
-    if _allow is None:
-        with open(ALLOWLIST_PATH, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        _allow = {k: set(v) for k, v in data.items()}
-    return _allow
-
-class Payload(BaseModel):
+class CodeIn(BaseModel):
     code: str
 
-app = FastAPI()
+def require_auth(x_auth_key: Optional[str]):
+    if not AUTH_KEY:
+        return
+    if x_auth_key != AUTH_KEY:
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
-@app.get("/healthz")
-def health():
-    try:
-        a = get_allow()
-        return {"ok": True, "allowlist_modules": list(a.keys())}
-    except Exception as e:
-        return {"ok": False, "error": str(e)}
+@app.post("/lint")
+def lint(payload: CodeIn, x_auth_key: Optional[str] = Header(default=None)):
+    require_auth(x_auth_key)
+    ok, errors = validate_python(payload.code)
+    return {"ok": ok, "errors": errors}
 
-@app.post("/validate")
-def validate(payload: Payload):
-    # Optional bearer key enforcement
-    from fastapi import Header, HTTPException
-    # If API_KEY is set, require Authorization: Bearer <API_KEY>
-    def _check(auth: str | None):
-        if not API_KEY:
-            return
-        if not auth or not auth.startswith("Bearer ") or auth.split(" ",1)[1] != API_KEY:
-            raise HTTPException(status_code=401, detail="Unauthorized")
-    # Read header
-    try:
-        from starlette.requests import Request  # type: ignore
-    except:
-        pass  # not critical
-    # Using dependency-free header pull
-    import os
-    # Starlette/FastAPI passes headers in request scope, but easier: accept via Header param
-    return _validate_internal(payload)
-
-def _validate_internal(payload: Payload):
-    ok, errs = v(payload.code, get_allow())
-    return {"ok": ok, "errors": errs}
+@app.post("/execute")
+def execute(payload: CodeIn, x_auth_key: Optional[str] = Header(default=None)):
+    require_auth(x_auth_key)
+    ok, errors = validate_python(payload.code)
+    if not ok:
+        raise HTTPException(status_code=422, detail={"errors": errors})
+    # If you actually execute code, sandbox it. For now, just confirm it passed.
+    # (Most users proxy to your existing ChronoRender executor here.)
+    return {"ok": True, "stdout": "", "stderr": "", "note": "Validation passed; execution stub"}
