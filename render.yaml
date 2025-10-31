@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: chrono-ast-gate
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ALLOWLIST_PATH
+        value: allowlist.json
+      - key: API_KEY
+        generateValue: true
+    healthCheckPath: /healthz
+    autoDeploy: true
